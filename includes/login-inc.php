@@ -8,7 +8,7 @@ if(isset($_POST["submit"])) {
     $password = $_POST["admin_password"];
 
     if(empty($username) || empty($password)) {
-        $_SESSION["status"] = "Fill in Empty Fields";
+        $_SESSION["status"] = "Please fill in empty fields!";
         header("Location: ../index.php?error=emptyfields&username=".$username);
         exit();
     } else {
@@ -16,7 +16,7 @@ if(isset($_POST["submit"])) {
         $stmt = mysqli_stmt_init($con);
    
     } if(!mysqli_stmt_prepare($stmt, $sql)) {
-        $_SESSION["status"] = "Something went wrong";
+        $_SESSION["status"] = "Something went wrong!";
         header("Location: ../index.php");
         exit();
     } else {
@@ -46,7 +46,7 @@ if(isset($_POST["submit"])) {
             }
 
         } else {
-            $_SESSION["status"] = "No existing Account. Please Sign up";
+            $_SESSION["status"] = "No existing account. Please sign up";
             header("Location: ../index.php");
             exit();
         }

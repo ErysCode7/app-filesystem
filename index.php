@@ -35,20 +35,22 @@
         <div class="container">
           <div class="row">
 
-                <?php
-                    if(isset($_SESSION["status"])) {
-                ?>
-                <div class="alert alert-warning">
-                    <h4><?= $_SESSION["status"]; ?></h4>
-                </div>
-                <?php unset($_SESSION["status"]); } ?>
-                <?php
-                    if(isset($_SESSION["success-status"])) {
-                ?>
-                <div class="alert alert-success">
-                    <h4><?= $_SESSION["success-status"]; ?></h4>
-                </div>
-                <?php unset($_SESSION["success-status"]); } ?>
+            <!-- alerts in login -->
+            <?php
+                if(isset($_SESSION["status"])) {
+            ?>
+            <div class="alert alert-warning">
+                <h4 class="text-center"><?= $_SESSION["status"]; ?></h4>
+            </div>               
+            <?php unset($_SESSION["status"]); } ?>
+            <?php
+                if(isset($_SESSION["success-status"])) {
+            ?>
+            <div class="alert alert-success">
+                <h4><?= $_SESSION["success-status"]; ?></h4>
+            </div>
+            <?php unset($_SESSION["success-status"]); } ?>
+
 
             <div class="col-md-9 col-lg-8 mx-auto">
               <h3 class="login-heading mb-4">Welcome back!</h3>
@@ -69,14 +71,18 @@
             
                 <div class="d-grid">
                   <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit" name="submit">Login</button>
+                      
 
-                  <div class="text-center">
+                  <!-- features if i have time -->
+
+                  <!-- <div class="text-center">
                     <a class="small" href="#">Forgot password?</a>
-                  </div>
+                  </div> -->
 
                 </div>
 
-                <!-- <p>No account? click <a class="text-uppercase fw-bold mb-2 mt-4" type="submit">here</a> to sign up.</p> -->
+                <p>No account? click <a class="text-uppercase fw-bold mb-2 mt-4" type="submit">here</a> to sign up.</p>
+                
               </form>
             </div>
           </div>
