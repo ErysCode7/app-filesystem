@@ -47,7 +47,7 @@
                 if(isset($_SESSION["success-status"])) {
             ?>
             <div class="alert alert-success">
-                <h4><?= $_SESSION["success-status"]; ?></h4>
+                <h4 class="text-center"><?= $_SESSION["success-status"]; ?></h4>
             </div>
             <?php unset($_SESSION["success-status"]); } ?>
 

@@ -36,7 +36,10 @@ if(isset($_POST["submit"])) {
             } else if($password == true) {
                 $_SESSION["authenticated"] = TRUE;
                 $_SESSION["success-status"] = "Login Success!";
-                header("Location: ../dashboard.php");
+                $_SESSION["auth_user"] = [
+                    "name" => $row["name"],
+                ];
+                header("Location: ../html/dashboard.php");
                 exit();
 
             } else {
