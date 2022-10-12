@@ -1,17 +1,4 @@
 <!DOCTYPE html>
-
-<!-- =========================================================
-* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
-==============================================================
-
-* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
-* Created by: ThemeSelection
-* License: You must have a valid license purchased in order to legally use the theme for your project.
-* Copyright ThemeSelection (https://themeselection.com)
-
-=========================================================
- -->
-<!-- beautify ignore:start -->
 <html
   lang="en"
   class="light-style layout-menu-fixed"
@@ -137,7 +124,6 @@
             </a>
           </div>
 
-          <div class="menu-inner-shadow"></div>
 
           <ul class="menu-inner py-1">
             <!-- Dashboard -->
@@ -148,27 +134,15 @@
               </a>
             </li>
 
-            <!-- Layouts -->
+            <!-- MEMBERS PERMANENT RECORDS -->
             <li class="menu-item">
-              <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-layout"></i>
-                <div data-i18n="Layouts">Layouts</div>
+              <a href="tables-basic.html" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-table"></i>
+                <div data-i18n="Tables">Member Permanent Records</div>
               </a>
-
-              <ul class="menu-sub">
-                
-                <li class="menu-item">
-                  <a href="layouts-blank.html" class="menu-link">
-                    <div data-i18n="Blank">Blank</div>
-                  </a>
-                </li>
-
-              </ul>
             </li>
 
-            <li class="menu-header small text-uppercase">
-              <span class="menu-header-text">Pages</span>
-            </li>
+        
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-dock-top"></i>
@@ -226,20 +200,8 @@
                     <div data-i18n="Error">Error</div>
                   </a>
                 </li>
-                <li class="menu-item">
-                  <a href="pages-misc-under-maintenance.html" class="menu-link">
-                    <div data-i18n="Under Maintenance">Under Maintenance</div>
-                  </a>
-                </li>
               </ul>
             </li>
-            
-            <!-- Components -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">Components</span></li>
-        
-
-            <!-- Forms & Tables -->
-            <li class="menu-header small text-uppercase"><span class="menu-header-text">Forms &amp; Tables</span></li>
             <!-- Forms -->
             <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
