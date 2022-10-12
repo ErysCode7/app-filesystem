@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html
   lang="en"
@@ -297,7 +298,7 @@
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">John Doe</span>
+                            <span class="fw-semibold d-block"><?= $_SESSION["auth_user"]["name"]; ?></span>
                             <small class="text-muted">Admin</small>
                           </div>
                         </div>
