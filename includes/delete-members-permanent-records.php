@@ -16,7 +16,7 @@ if(isset($_POST["submit"])) {
         mysqli_stmt_bind_param($stmt, "s", $student_number);
         mysqli_stmt_execute($stmt);
         $_SESSION["delete-success"] = "Delete Sucess!";
-        header("Location: ../member-permanent-records.php");
+        header("Location: ../pages/members-permanent-records.php");
         exit();
     }
     
