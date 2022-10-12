@@ -136,9 +136,9 @@
 
             <!-- MEMBERS PERMANENT RECORDS -->
             <li class="menu-item">
-              <a href="tables-basic.html" class="menu-link">
+              <a href="./member-permanent-records.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-table"></i>
-                <div data-i18n="Tables">Member Permanent Records</div>
+                <div data-i18n="Member Permanent Records">Member Permanent Records</div>
               </a>
             </li>
 
