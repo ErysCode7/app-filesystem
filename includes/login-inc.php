@@ -39,7 +39,7 @@ if(isset($_POST["submit"])) {
                 $_SESSION["auth_user"] = [
                     "name" => $row["name"],
                 ];
-                header("Location: ../html/dashboard.php");
+                header("Location: ../pages/dashboard.php");
                 exit();
 
             } else {

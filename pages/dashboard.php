@@ -60,7 +60,7 @@
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
           <div class="app-brand demo">
-            <a href="index.html" class="app-brand-link">
+            <a href="dashboard.php" class="app-brand-link">
               <span class="app-brand-logo demo">
                 <svg
                   width="25"
@@ -136,9 +136,9 @@
 
             <!-- MEMBERS PERMANENT RECORDS -->
             <li class="menu-item">
-              <a href="./member-permanent-records.php" class="menu-link">
+              <a href="./members-permanent-records.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-table"></i>
-                <div data-i18n="Member Permanent Records">Member Permanent Records</div>
+                <div data-i18n="Members Permanent Records">Members Permanent Records</div>
               </a>
             </li>
 
@@ -310,10 +310,12 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="auth-login-basic.html">
-                        <i class="bx bx-power-off me-2"></i>
-                        <span class="align-middle">Log Out</span>
-                      </a>
+                      <form action="../includes/logout.php" method="GET">                    
+                        <p class="dropdown-item cursor-pointer">
+                          <i class="bx bx-power-off me-2"></i>
+                          <button class="align-middle btn">Log Out</button>
+                        </p>
+                      </form>
                     </li>
                   </ul>
                 </li>
