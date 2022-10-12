@@ -262,11 +262,11 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <form action="../includes/logout.php">                    
-                        <a class="dropdown-item" href="auth-login-basic.html">
+                      <form action="../includes/logout.php" method="GET">                    
+                        <p class="dropdown-item cursor-pointer">
                           <i class="bx bx-power-off me-2"></i>
-                          <span class="align-middle">Log Out</span>
-                        </a>
+                          <button class="align-middle btn">Log Out</button>
+                        </p>
                       </form>
                     </li>
                   </ul>
