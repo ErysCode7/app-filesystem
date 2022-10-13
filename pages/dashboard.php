@@ -314,8 +314,7 @@
                         </div>
                       </div>
                     </div>
-                    <!-- </div>
-    <div class="row"> -->
+              
                     <div class="col-12 mb-4">
                       <div class="card">
                         <div class="card-body">
@@ -625,6 +624,6 @@
                 <!--/ Transactions -->
               </div>
             </div>
-            <!-- / Content -->
+         
 
 <?php include "../includes/view/footer.php" ?>

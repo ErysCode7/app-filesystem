@@ -195,14 +195,8 @@
                 </div>
               </div>
             </div>
-            </div>
+          </div>
           
-            <!--/ Hoverable Table rows -->
-
-            <hr class="my-5" />
-
-              <!--/ Responsive Table -->
-            </div>
-            <!-- / Content -->
-
+          <!--/ Hoverable Table rows -->
+          
 <?php include "../includes/view/footer.php" ?>
