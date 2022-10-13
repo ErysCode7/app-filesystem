@@ -137,7 +137,7 @@
                     <?php while($row = $result->fetch_assoc()) { ?>
                     <tbody class="table-border-bottom-0">
                       <tr>
-                        <td><a href="">View Details</td>
+                        <td><a href="./view-profile.php?student_number=<?= $row["student_number"]; ?>">View Details</td>
                         <td><?php echo $row["student_number"]; ?></td>
                         <td>
                         <?php echo $row["first_name"]; ?>
