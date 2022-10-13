@@ -1,5 +1,7 @@
-<?php session_start(); ?>
-<!DOCTYPE html>
+<?php
+  session_start();
+  require "../includes/authentication/authentication.php";
+?>
 <?php require "../includes/view/header.php"; ?>
 
 
