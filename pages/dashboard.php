@@ -1,6 +1,5 @@
 <?php
-  session_start();
-  require "../includes/authentication/authentication.php";
+   require "../includes/authentication/authentication.php";
 ?>
 <?php require "../includes/view/header.php"; ?>
 
@@ -8,7 +7,7 @@
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
-        
+
        <!-- SIDEBAR -->
        <?php require "../includes/view/sidebar.php"; ?>
         <!-- / SIDEBAR -->
