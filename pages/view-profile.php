@@ -20,13 +20,13 @@ if(isset($_GET["student_number"])) {
 
 
 <section style="background-color: #eee;">
+
   <div class="container py-5">
     <div class="row">
       <div class="col">
         <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
           <ol class="breadcrumb mb-0">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">User</a></li>
+            <li class="breadcrumb-item"><a href="./members-permanent-records.php">Members Permanent Records</a></li>
             <li class="breadcrumb-item active" aria-current="page">User Profile</li>
           </ol>
         </nav>
@@ -34,14 +34,18 @@ if(isset($_GET["student_number"])) {
     </div>
 
     <div class="row">
+
       <div class="col-lg-4">
         <div class="card mb-4">
           <div class="card-body text-center">
             <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
               class="rounded-circle img-fluid" style="width: 150px;">
-            <h5 class="my-3">John Smith</h5>
-            <p class="text-muted mb-1">Full Stack Developer</p>
-            <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
+            <h5 class="my-3"><?= $row["first_name"] ?> <?= $row["last_name"] ?></h5>
+            
+            <div class="input-group my-3">
+               <input type="file" class="form-control" id="inputGroupFile02" />
+               <label class="input-group-text" for="inputGroupFile02">Upload</label>
+            </div>
             <div class="d-flex justify-content-center mb-2">
               <button type="button" class="btn btn-primary">Follow</button>
               <button type="button" class="btn btn-outline-primary ms-1">Message</button>
@@ -75,55 +79,166 @@ if(isset($_GET["student_number"])) {
           </div>
         </div>
       </div>
+
       <div class="col-lg-8">
         <div class="card mb-4">
           <div class="card-body">
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Full Name</p>
+                <p class="mb-0">Student Number</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">Johnatan Smith</p>
+                <p class="text-muted mb-0"><?= $row["student_number"] ?></p>
               </div>
             </div>
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Email</p>
+                <p class="mb-0">First Name</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">example@example.com</p>
+                <p class="text-muted mb-0"><?= $row["first_name"] ?></p>
               </div>
             </div>
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Phone</p>
+                <p class="mb-0">Last Name</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">(097) 234-5678</p>
+                <p class="text-muted mb-0"><?= $row["last_name"] ?></p>
               </div>
             </div>
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Mobile</p>
+                <p class="mb-0">Birthday</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">(098) 765-4321</p>
+                <p class="text-muted mb-0"><?= $row["birthday"] ?></p>
               </div>
             </div>
             <hr>
             <div class="row">
               <div class="col-sm-3">
-                <p class="mb-0">Address</p>
+                <p class="mb-0">Contact Number</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
+                <p class="text-muted mb-0"><?= $row["contact_number"] ?></p>
               </div>
             </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Address </p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0"><?= $row["address"] ?></p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Troupe</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0"><?= $row["troupe"] ?></p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Course</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0"><?= $row["course"] ?></p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Curriculum Year</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0"><?= $row["curriculum_year"] ?></p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Date of Membership</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0"><?= $row["date_of_membership"] ?></p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Status</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0"><?= $row["active_status"] ?></p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Fathers Name</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0"><?= $row["fathers_name"] ?></p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Fathers Occupation</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0"><?= $row["fathers_occupation"] ?></p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Fathers phone number</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0"><?= $row["fathers_phone_number"] ?></p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Mothers Name</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0"><?= $row["mothers_name"] ?></p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Mothers Occupation</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0"><?= $row["mothers_occupation"] ?></p>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="mb-0">Mothers phone number</p>
+              </div>
+              <div class="col-sm-9">
+                <p class="text-muted mb-0"><?= $row["mothers_phone_number"] ?></p>
+              </div>
+            </div>
+            <hr>
           </div>
         </div>
+
         <div class="row">
           <div class="col-md-6">
             <div class="card mb-4 mb-md-0">
@@ -158,6 +273,7 @@ if(isset($_GET["student_number"])) {
               </div>
             </div>
           </div>
+
           <div class="col-md-6">
             <div class="card mb-4 mb-md-0">
               <div class="card-body">
@@ -191,6 +307,7 @@ if(isset($_GET["student_number"])) {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>
