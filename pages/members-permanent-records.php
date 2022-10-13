@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
-<?php require "../includes/header.php"; ?>
+<?php require "../includes/view/header.php"; ?>
 
 
 
@@ -262,7 +262,7 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <form action="../includes/logout.php" method="GET">                    
+                      <form action="../includes/controller/logout.php" method="GET">                    
                         <p class="dropdown-item cursor-pointer">
                           <i class="bx bx-power-off me-2"></i>
                           <button class="align-middle btn">Log Out</button>
@@ -319,7 +319,7 @@
                       </tr>
                     </thead>
                     <?php 
-                      require "../includes/connection.php";
+                      require "../includes/model/connection.php";
                       $sql = "SELECT * FROM members_permanent_records";
                       $result = $con->query($sql);
                     ?>
@@ -376,7 +376,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <form action="../includes/delete-members-permanent-records.php" method="post" id="form-delete-user">         
+                    <form action="../includes/controller/delete-members-permanent-records.php" method="post" id="form-delete-user">         
                       <button type="submit" name="submit" class="btn btn-danger">Delete</button>
                       <input type="hidden" name="id">
                     </form>
@@ -386,31 +386,6 @@
             </div>
             </div>
           
-       
-             <!-- DELETE Modal
-             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Delete Record</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                  <div class="modal-body">
-                    Would you like to delete this record? 
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <form action="../includes/delete-members-permanent-records.php" method="post">         
-                      <button type="submit" class="btn btn-danger">Delete</button>
-                      <input type="hidden" name="student_number" value="">
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-         
-                      
-
             <!--/ Hoverable Table rows -->
 
             <hr class="my-5" />
@@ -419,4 +394,4 @@
             </div>
             <!-- / Content -->
 
-<?php include "../includes/footer.php" ?>
+<?php include "../includes/view/footer.php" ?>

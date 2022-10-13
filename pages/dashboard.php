@@ -1,6 +1,5 @@
 <?php session_start(); ?>
-<?php require "../includes/header.php"; ?>
-<link rel="shortcut icon" href="../assets/images/rtu-favicon.png" type="image/x-icon">
+<?php require "../includes/view/header.php"; ?>
 
   <body>
     <!-- Layout wrapper -->
@@ -815,4 +814,4 @@
             </div>
             <!-- / Content -->
 
-<?php include "../includes/footer.php" ?>
+<?php include "../includes/view/footer.php" ?>
