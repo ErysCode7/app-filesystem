@@ -56,7 +56,7 @@
               <h3 class="login-heading mb-4">Welcome back!</h3>
 
               <!-- LOGIN Form -->
-              <form action="./includes/login-inc.php" method="post">
+              <form action="./includes/controller/login-inc.php" method="post">
                 
                 <div class="form-floating mb-3">
                   <input type="text" class="form-control" name="admin_username" id="floatingInput" placeholder="Username...">
