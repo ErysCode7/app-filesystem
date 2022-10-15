@@ -110,7 +110,7 @@ if(isset($_GET["student_number"])) {
                 <p class="mb-0">Student Number</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?= $row["student_number"] ?></p>
+                <p class=" mb-0 h6 text-dark"><?= $row["student_number"] ?></p>
               </div>
             </div>
             <hr>
@@ -119,7 +119,7 @@ if(isset($_GET["student_number"])) {
                 <p class="mb-0">First Name</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?= $row["first_name"] ?></p>
+                <p class=" mb-0 h6 text-dark"><?= $row["first_name"] ?></p>
               </div>
             </div>
             <hr>
@@ -128,7 +128,7 @@ if(isset($_GET["student_number"])) {
                 <p class="mb-0">Last Name</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?= $row["last_name"] ?></p>
+                <p class=" mb-0 h6 text-dark"><?= $row["last_name"] ?></p>
               </div>
             </div>
             <hr>
@@ -137,7 +137,7 @@ if(isset($_GET["student_number"])) {
                 <p class="mb-0">Birthday</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?= $row["birthday"] ?></p>
+                <p class=" mb-0 h6 text-dark"><?= $row["birthday"] ?></p>
               </div>
             </div>
             <hr>
@@ -146,7 +146,7 @@ if(isset($_GET["student_number"])) {
                 <p class="mb-0">Contact Number</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?= $row["contact_number"] ?></p>
+                <p class=" mb-0 h6 text-dark"><?= $row["contact_number"] ?></p>
               </div>
             </div>
             <hr>
@@ -155,7 +155,7 @@ if(isset($_GET["student_number"])) {
                 <p class="mb-0">Address </p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?= $row["address"] ?></p>
+                <p class=" mb-0 h6 text-dark"><?= $row["address"] ?></p>
               </div>
             </div>
             <hr>
@@ -164,7 +164,7 @@ if(isset($_GET["student_number"])) {
                 <p class="mb-0">Troupe</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?= $row["troupe"] ?></p>
+                <p class=" mb-0 h6 text-dark"><?= $row["troupe"] ?></p>
               </div>
             </div>
             <hr>
@@ -173,7 +173,7 @@ if(isset($_GET["student_number"])) {
                 <p class="mb-0">Course</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?= $row["course"] ?></p>
+                <p class=" mb-0 h6 text-dark"><?= $row["course"] ?></p>
               </div>
             </div>
             <hr>
@@ -182,7 +182,7 @@ if(isset($_GET["student_number"])) {
                 <p class="mb-0">Curriculum Year</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?= $row["curriculum_year"] ?></p>
+                <p class=" mb-0 h6 text-dark"><?= $row["curriculum_year"] ?></p>
               </div>
             </div>
             <hr>
@@ -191,7 +191,7 @@ if(isset($_GET["student_number"])) {
                 <p class="mb-0">Date of Membership</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?= $row["date_of_membership"] ?></p>
+                <p class=" mb-0 h6 text-dark"><?= $row["date_of_membership"] ?></p>
               </div>
             </div>
             <hr>
@@ -200,7 +200,7 @@ if(isset($_GET["student_number"])) {
                 <p class="mb-0">Status</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?= $row["active_status"] ?></p>
+                <p class=" mb-0 h6 text-dark text-uppercase"><?= $row["active_status"] ?></p>
               </div>
             </div>
             <hr>
@@ -209,7 +209,7 @@ if(isset($_GET["student_number"])) {
                 <p class="mb-0">Fathers Name</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?= $row["fathers_name"] ?></p>
+                <p class=" mb-0 h6 text-dark"><?= $row["fathers_name"] ?></p>
               </div>
             </div>
             <hr>
@@ -218,7 +218,7 @@ if(isset($_GET["student_number"])) {
                 <p class="mb-0">Fathers Occupation</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?= $row["fathers_occupation"] ?></p>
+                <p class=" mb-0 h6 text-dark"><?= $row["fathers_occupation"] ?></p>
               </div>
             </div>
             <hr>
@@ -227,7 +227,7 @@ if(isset($_GET["student_number"])) {
                 <p class="mb-0">Fathers phone number</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?= $row["fathers_phone_number"] ?></p>
+                <p class=" mb-0 h6 text-dark"><?= $row["fathers_phone_number"] ?></p>
               </div>
             </div>
             <hr>
@@ -236,7 +236,7 @@ if(isset($_GET["student_number"])) {
                 <p class="mb-0">Mothers Name</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?= $row["mothers_name"] ?></p>
+                <p class=" mb-0 h6 text-dark"><?= $row["mothers_name"] ?></p>
               </div>
             </div>
             <hr>
@@ -245,7 +245,7 @@ if(isset($_GET["student_number"])) {
                 <p class="mb-0">Mothers Occupation</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?= $row["mothers_occupation"] ?></p>
+                <p class=" mb-0 h6 text-dark"><?= $row["mothers_occupation"] ?></p>
               </div>
             </div>
             <hr>
@@ -254,7 +254,7 @@ if(isset($_GET["student_number"])) {
                 <p class="mb-0">Mothers phone number</p>
               </div>
               <div class="col-sm-9">
-                <p class="text-muted mb-0"><?= $row["mothers_phone_number"] ?></p>
+                <p class=" mb-0 h6 text-dark"><?= $row["mothers_phone_number"] ?></p>
               </div>
             </div>
             <hr>
