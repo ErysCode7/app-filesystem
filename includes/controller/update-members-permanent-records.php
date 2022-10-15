@@ -2,7 +2,7 @@
 
 session_start();
 
-if(isset($POST["submit"])) {
+if(isset($_POST["submit"])) {
     require "../model/connection.php";
     $student_number = $_POST["student_number"];
     $first_name = $_POST["first_name"];
