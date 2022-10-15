@@ -141,9 +141,9 @@
                 </div>
 
                 <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="date_of_membership">Date of Membership</label>
+                    <label class="col-sm-2 col-form-label" for="fathers_occupation">Fathers Occupation</label>
                     <div class="col-sm-10">
-                    <input type="text" name="date_of_membership" id="date_of_membership" value="<?= $date_of_membership ?>" class="form-control"   />
+                    <input type="text" name="fathers_occupation" id="fathers_occupation" value="<?= $fathers_occupation ?>" class="form-control"   />
                     </div>
                 </div>
 
