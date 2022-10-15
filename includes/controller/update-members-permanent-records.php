@@ -24,7 +24,7 @@ if(isset($POST["submit"])) {
     $mothers_phone_number = $_POST["mothers_phone_number"];
 
     
-    $sql = "UPDATE students SET first_name = ?, last_name = ?, email = ?, birth_date = ?,
+    $sql = "UPDATE members_permanent_records SET student_number = ?, first_name = ?, last_name = ?, birthday = ?, birth_date = ?,
     sex = ?, department = ?, course = ? WHERE student_id = ?;";
 
 
