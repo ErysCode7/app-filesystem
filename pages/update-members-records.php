@@ -47,7 +47,7 @@
            
             </div>
             <div class="card-body">
-                <form>
+                <form action="../includes/controller/update-members-permanent-records.php" method="post">
 
                 <div class="row mb-3">
                     <label class="col-sm-2 col-form-label" for="student_number">Studen Number</label>
