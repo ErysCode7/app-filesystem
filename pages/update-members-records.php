@@ -50,60 +50,58 @@
                 <form>
 
                 <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-default-name">First name</label>
+                    <label class="col-sm-2 col-form-label" for="student_number">Studen Number</label>
                     <div class="col-sm-10">
-                    <input type="text" name="first_name" value="<?= $first_name ?>" class="form-control" id="basic-default-name"  />
+                    <input type="text" name="first_name" id="student_number" value="<?= $student_number ?>" class="form-control"   />
                     </div>
                 </div>
 
                 <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-default-name">Last name</label>
+                    <label class="col-sm-2 col-form-label" for="first_name">First name</label>
                     <div class="col-sm-10">
-                    <input type="text" name="last_name" value="<?= $last_name ?>" class="form-control" id="basic-default-name" />
+                    <input type="text" name="first_name" id="first_name" value="<?= $first_name ?>" class="form-control"   />
                     </div>
                 </div>
 
                 <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-default-company">Company</label>
+                    <label class="col-sm-2 col-form-label" for="last_name">Last name</label>
                     <div class="col-sm-10">
-                    <input
-                        type="text"
-                        class="form-control"
-                        id="basic-default-company"
-                        placeholder="ACME Inc."
-                    />
+                    <input type="text" name="last_name" id="last_name" value="<?= $last_name ?>" class="form-control"   />
                     </div>
                 </div>
+
                 <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-default-email">Email</label>
+                    <label class="col-sm-2 col-form-label" for="birthday">Birthday</label>
                     <div class="col-sm-10">
-                    <div class="input-group input-group-merge">
-                        <input
-                        type="text"
-                        id="basic-default-email"
-                        class="form-control"
-                        placeholder="john.doe"
-                        aria-label="john.doe"
-                        aria-describedby="basic-default-email2"
-                        />
-                        <span class="input-group-text" id="basic-default-email2">@example.com</span>
-                    </div>
-                    <div class="form-text">You can use letters, numbers & periods</div>
+                    <input type="text" name="birthday" id="birthday" value="<?= $birthday ?>" class="form-control"   />
                     </div>
                 </div>
+
                 <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="basic-default-phone">Phone No</label>
+                    <label class="col-sm-2 col-form-label" for="contact_number">Contact Number</label>
                     <div class="col-sm-10">
-                    <input
-                        type="text"
-                        id="basic-default-phone"
-                        class="form-control phone-mask"
-                        placeholder="658 799 8941"
-                        aria-label="658 799 8941"
-                        aria-describedby="basic-default-phone"
-                    />
+                    <input type="text" name="contact_number" id="contact_number" value="<?= $contact_number ?>" class="form-control"   />
                     </div>
                 </div>
+
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="address">Address</label>
+                    <div class="col-sm-10">
+                    <input type="text" name="address" id="address" value="<?= $address ?>" class="form-control"   />
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="address">Address</label>
+                    <div class="col-sm-10">
+                    <input type="text" name="address" id="address" value="<?= $address ?>" class="form-control"   />
+                    </div>
+                </div>
+
+              
+
+
+             
                
                 <div class="row justify-content-end">
                     <div class="col-sm-10">
