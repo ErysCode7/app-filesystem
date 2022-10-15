@@ -92,9 +92,9 @@
                 </div>
 
                 <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="address">Address</label>
+                    <label class="col-sm-2 col-form-label" for="troupe">Troupe</label>
                     <div class="col-sm-10">
-                    <input type="text" name="address" id="address" value="<?= $address ?>" class="form-control"   />
+                    <input type="text" name="troupe" id="troupe" value="<?= $troupe ?>" class="form-control"   />
                     </div>
                 </div>
 
