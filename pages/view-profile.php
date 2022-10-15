@@ -55,18 +55,28 @@ if(isset($_GET["student_number"])) {
                   <img src="./upload/<?= $rowImage["image_directory"]; ?>" alt="Profile Image" class="profile-image rounded-circle img-fluid" style="width: 150px;">
             <?php } ?>
             <h5 class="my-3"><?= $row["first_name"] ?> <?= $row["last_name"] ?></h5>
-            <form action="./upload/members-upload.php" method="post" enctype="multipart/form-data">
-               <input type="hidden" name="student_number" id="student_number" value="<?= $row["student_number"]; ?>"> 
-               <div class="input-group my-3">
-                  <input type="file" class="form-control" id="inputGroupFile02" name="image" id="image" />
-                  <label class="input-group-text" for="inputGroupFile02">Upload</label>
-               </div>
-               <div class="profile-buttons">
+            <div class="d-flex flex-wrap  justify-content-center mb-2">
+              <form action="./upload/members-upload.php" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="student_number" id="student_number" value="<?= $row["student_number"]; ?>"> 
+                <div class="input-group my-3">
+                    <input type="file" class="form-control" id="inputGroupFile02" name="image" id="image" />
+                    <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                </div>
+                <div class="profile-buttons">
+                    <div class="form-group mb-3">
+                      <button type="submit" name="upload" class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Note please delete the profile image before uploading new one to avoid memory leak">Upload</button>
+                    </div>
+                </div>
+              </form>
+              <form action="./upload/members-delete.php" method="post">
+                  <input type="hidden" name="student_number" id="student_number" value="<?= $row["student_number"]; ?>"> 
+                  <input type="hidden" name="image_directory" id="image_directory" value="<?= $rowImage["image_directory"]; ?>">
                   <div class="form-group mb-3">
-                     <button type="submit" name="upload" class="btn btn-primary">Upload</button>
+                      <button type="submit" name="delete" class="btn btn-danger">Delete profile image</button>
                   </div>
-               </div>
-            </form>
+              </form>
+            </div>
+           
             
             <?php
                   if(isset($_SESSION["status"])) {
@@ -90,7 +100,6 @@ if(isset($_GET["student_number"])) {
             
           </div>
         </div>
-       
       </div>
 
       <div class="col-lg-8">
@@ -251,7 +260,7 @@ if(isset($_GET["student_number"])) {
             <hr>
           </div>
         </div>
-        
+
         </div>
       </div>
     </div>
