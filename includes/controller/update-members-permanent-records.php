@@ -21,7 +21,7 @@ if(isset($POST["submit"])) {
 
     $mothers_name = $_POST["mothers_name"];
     $mothers_occupation = $_POST["mothers_occupation"];
-    $active_status = $_POST["active_status"];
+    $mothers_phone_number = $_POST["mothers_phone_number"];
 
 
 } else {
