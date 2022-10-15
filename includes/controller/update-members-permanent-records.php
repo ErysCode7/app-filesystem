@@ -30,13 +30,13 @@ if(isset($POST["submit"])) {
     $stmt = mysqli_stmt_init($con);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         $_SESSION["status"] = "Something went wrong";
-        header("Location: update-student.php?query=failed");
+        header("Location: ../../update-members-records.php?query=failed");
         exit();
     } else {
         mysqli_stmt_bind_param($stmt, "ssssssss", $first_name, $last_name, $email, $birth_date, $sex, $department, $course, $student_id);
         mysqli_stmt_execute($stmt);
         $_SESSION["status-success"] = "Updated Successfully!";
-        header("Location: students.php?update=success");
+        header("Location: ../../update-members-records.php?update=success");
         exit();
     }
 
