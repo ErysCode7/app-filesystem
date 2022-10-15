@@ -105,6 +105,13 @@
                     </div>
                 </div>
 
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="curriculum_year">Curriculum year</label>
+                    <div class="col-sm-10">
+                    <input type="text" name="curriculum_year" id="curriculum_year" value="<?= $curriculum_year ?>" class="form-control"   />
+                    </div>
+                </div>
+
               
 
 
