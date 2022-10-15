@@ -25,7 +25,7 @@ if(isset($POST["submit"])) {
 
     
     $sql = "UPDATE members_permanent_records SET student_number = ?, first_name = ?, last_name = ?, birthday = ?, contact_number = ?,
-    troupe = ?, course = ?, curriculum_year = ?,  date_of_membership = ?, active_status = ?,  fathers_name = ?, WHERE student_id = ?;";
+    troupe = ?, course = ?, curriculum_year = ?,  date_of_membership = ?, active_status = ?,  fathers_name = ?, fathers_occupation = ?, WHERE student_id = ?;";
 
 
 
