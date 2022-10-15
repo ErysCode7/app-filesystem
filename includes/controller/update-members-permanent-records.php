@@ -23,6 +23,11 @@ if(isset($POST["submit"])) {
     $mothers_occupation = $_POST["mothers_occupation"];
     $mothers_phone_number = $_POST["mothers_phone_number"];
 
+    
+    $sql = "UPDATE students SET first_name = ?, last_name = ?, email = ?, birth_date = ?,
+    sex = ?, department = ?, course = ? WHERE student_id = ?;";
+
+
 
 } else {
     $_SESSION["status"] = "Not Allowed";
