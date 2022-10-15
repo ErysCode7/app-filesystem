@@ -14,7 +14,15 @@ if(isset($POST["submit"])) {
     $curriculum_year = $_POST["curriculum_year"];
     $date_of_membership = $_POST["date_of_membership"];
     $active_status = $_POST["active_status"];
-    
+
+    $fathers_name = $_POST["fathers_name"];
+    $active_status = $_POST["active_status"];
+    $active_status = $_POST["active_status"];
+
+    $active_status = $_POST["active_status"];
+    $active_status = $_POST["active_status"];
+    $active_status = $_POST["active_status"];
+
 
 } else {
     $_SESSION["status"] = "Not Allowed";
