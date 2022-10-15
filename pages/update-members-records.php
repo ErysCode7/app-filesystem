@@ -170,9 +170,9 @@
                 </div>
 
                 <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="date_of_membership">Date of Membership</label>
+                    <label class="col-sm-2 col-form-label" for="mothers_phone_number">Mothers Phone Number</label>
                     <div class="col-sm-10">
-                    <input type="text" name="date_of_membership" id="date_of_membership" value="<?= $date_of_membership ?>" class="form-control"   />
+                    <input type="text" name="mothers_phone_number" id="mothers_phone_number" value="<?= $mothers_phone_number ?>" class="form-control"   />
                     </div>
                 </div>
                
