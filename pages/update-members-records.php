@@ -120,16 +120,15 @@
                 </div>
 
                 <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="date_of_membership">Date of Membership</label>
+                    <label class="col-sm-2 col-form-label" for="active_status">Status</label>
                     <div class="col-sm-10">
-                    <input type="text" name="date_of_membership" id="date_of_membership" value="<?= $date_of_membership ?>" class="form-control"   />
-                    </div>
-                </div>
-
-                <div class="row mb-3">
-                    <label class="col-sm-2 col-form-label" for="date_of_membership">Date of Membership</label>
-                    <div class="col-sm-10">
-                    <input type="text" name="date_of_membership" id="date_of_membership" value="<?= $date_of_membership ?>" class="form-control"   />
+                        <select name="active_status" id="active_status" value="<?= $active_status ?>" class="form-control" required>
+                            <option value="">Select status</option>
+                            <option value="Active">Active</option>
+                            <option value="Inactive">Inactive</option>
+                            <option value="Quit">Quit</option>
+                            <option value="Alumni">Alumni</option>
+                        </select>
                     </div>
                 </div>
 
