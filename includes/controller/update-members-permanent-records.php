@@ -33,7 +33,7 @@ if(isset($POST["submit"])) {
         header("Location: ../../update-members-records.php?query=failed");
         exit();
     } else {
-        mysqli_stmt_bind_param($stmt, "ssssssssssssssss", $student_number, $first_name, $last_name, $birthday, );
+        mysqli_stmt_bind_param($stmt, "ssssssssssssssss", $student_number, $first_name, $last_name, $birthday, $contact_number, );
         mysqli_stmt_execute($stmt);
         $_SESSION["status-success"] = "Updated Successfully!";
         header("Location: ../../update-members-records.php?update=success");
