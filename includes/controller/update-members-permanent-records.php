@@ -9,6 +9,9 @@ if(isset($POST["submit"])) {
     $last_name = $_POST["last_name"];
     $birthday = $_POST["birthday"];
     $contact_number = $_POST["contact_number"];
+    $troupe = $_POST["troupe"];
+    $address = $_POST["address"];
+    $address = $_POST["address"];
     $address = $_POST["address"];
 
 } else {
