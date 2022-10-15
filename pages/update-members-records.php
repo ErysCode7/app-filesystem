@@ -62,7 +62,7 @@
             </div>
             <div class="card-body">
                 <form action="../includes/controller/update-members-permanent-records.php" method="post">
-
+                <input type="hidden" name="student_number" id="student_number" value="<?= $row["student_number"]; ?>"> 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="student_number">Studen Number</label>
                         <div class="col-sm-10">
