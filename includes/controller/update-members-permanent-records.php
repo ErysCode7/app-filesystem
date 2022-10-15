@@ -10,7 +10,7 @@ if(isset($POST["submit"])) {
     $birthday = $_POST["birthday"];
     $contact_number = $_POST["contact_number"];
     $troupe = $_POST["troupe"];
-    $address = $_POST["address"];
+    $course = $_POST["course"];
     $address = $_POST["address"];
     $address = $_POST["address"];
 
