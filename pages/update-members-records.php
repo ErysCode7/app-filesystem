@@ -44,6 +44,20 @@
             <div class="card mb-4">
             <div class="card-header d-flex align-items-center justify-content-between">
                 <h5 class="mb-0">Update records</h5>
+                <?php
+                    if(isset($_SESSION["status"])) {
+                ?>
+                <div class="alert alert-warning">
+                    <h4><?= $_SESSION["status"]; ?></h4>
+                </div>
+                <?php unset($_SESSION["status"]); } ?>
+                <?php 
+                    if(isset($_SESSION["status-success"])) {
+                ?>
+                <div class="alert alert-success">
+                    <h4><?= $_SESSION["status-success"]; ?></h4>
+                </div>
+                <?php unset($_SESSION["status-success"]); } ?>
            
             </div>
             <div class="card-body">
