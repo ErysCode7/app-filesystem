@@ -138,10 +138,10 @@
                     <div class="col-sm-10">
                         <select name="active_status" id="active_status" value="<?= $active_status ?>" class="form-control" required>
                             <option value="">Select status</option>
-                            <option value="Active">Active</option>
-                            <option value="Inactive">Inactive</option>
-                            <option value="Quit">Quit</option>
-                            <option value="Alumni">Alumni</option>
+                            <option value="active">Active</option>
+                            <option value="inactive">Inactive</option>
+                            <option value="quit">Quit</option>
+                            <option value="alumni">Alumni</option>
                         </select>
                     </div>
                 </div>

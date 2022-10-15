@@ -30,19 +30,19 @@ if(isset($POST["submit"])) {
     $stmt = mysqli_stmt_init($con);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         $_SESSION["status"] = "Something went wrong";
-        header("Location: ../../update-members-records.php?query=failed");
+        header("Location: ../../pages/update-members-records.php?query=failed");
         exit();
     } else {
         mysqli_stmt_bind_param($stmt, "ssssssssssssssss", $student_number, $first_name, $last_name, $birthday, $contact_number, $troupe, $course, $curriculum_year, $date_of_membership, $active_status, $fathers_name, $fathers_occupation, $fathers_phone_number, $mothers_name, $mothers_occupation, $mothers_phone_number, $student_number);
         mysqli_stmt_execute($stmt);
         $_SESSION["status-success"] = "Updated Successfully!";
-        header("Location: ../../update-members-records.php?update=success");
+        header("Location: ../../pages/update-members-records.php?update=success");
         exit();
     }
 
 } else {
     $_SESSION["status"] = "Not Allowed";
-    header("Location: ../../member-permanent-records.php");
+    header("Location: ../../pages/member-permanent-records.php");
     exit();
 }
 

@@ -10,7 +10,7 @@ if(isset($_POST["submit"])) {
     $stmt = mysqli_stmt_init($con);
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         $_SESSION["status"] = "Something Went Wrong";
-        header("Location: ../../member-permanent-records.php");
+        header("Location: ../../pages/member-permanent-records.php");
         exit();
     } else {
         mysqli_stmt_bind_param($stmt, "s", $student_number);
