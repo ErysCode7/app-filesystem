@@ -20,7 +20,7 @@ if(isset($POST["submit"])) {
     $fathers_phone_number = $_POST["fathers_phone_number"];
 
     $mothers_name = $_POST["mothers_name"];
-    $active_status = $_POST["active_status"];
+    $mothers_occupation = $_POST["mothers_occupation"];
     $active_status = $_POST["active_status"];
 
 
