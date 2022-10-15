@@ -147,9 +147,30 @@
                         <td><?php echo $row["contact_number"]; ?></td>
                         <td><?php echo $row["course"]; ?></td>
                         <td class="d-flex align-items-center gap-2">
-                          <form action="">       
-                            <button class="btn btn-primary"><i class="bx bx-edit-alt me-1"></i> Edit</button>
+                          <!-- UPDATE -->
+                          <form action="./update-members-records.php" method="post">
+                            <!-- UPDATING FIELDS PASSING IT TO ANOTHER FORM -->   
+                            <input type="hidden" name="student_number" value="<?php echo $row["student_number"]; ?>">
+                            <input type="hidden" name="first_name" value="<?php echo $row["first_name"]; ?>">
+                            <input type="hidden" name="last_name" value="<?php echo $row["last_name"]; ?>">
+                            <input type="hidden" name="troupe" value="<?php echo $row["troupe"]; ?>">
+                            <input type="hidden" name="contact_number" value="<?php echo $row["contact_number"]; ?>">
+                            <input type="hidden" name="course" value="<?php echo $row["course"]; ?>">
+                            <input type="hidden" name="curriculum_year" value="<?php echo $row["curriculum_year"]; ?>">
+                            <input type="hidden" name="birthday" value="<?php echo $row["birthday"]; ?>">
+                            <input type="hidden" name="date_of_membership" value="<?php echo $row["date_of_membership"]; ?>">
+                            <input type="hidden" name="address" value="<?php echo $row["address"]; ?>">
+                            <input type="hidden" name="active_status" value="<?php echo $row["active_status"]; ?>">
+                            <input type="hidden" name="fathers_name" value="<?php echo $row["fathers_name"]; ?>">
+                            <input type="hidden" name="fathers_occupation" value="<?php echo $row["fathers_occupation"]; ?>">
+                            <input type="hidden" name="fathers_phone_number" value="<?php echo $row["fathers_phone_number"]; ?>">
+                            <input type="hidden" name="mothers_name" value="<?php echo $row["mothers_name"]; ?>">
+                            <input type="hidden" name="mothers_occupation" value="<?php echo $row["mothers_occupation"]; ?>">
+                            <input type="hidden" name="mothers_phone_number" value="<?php echo $row["mothers_phone_number"]; ?>">
+
+                            <button class="btn btn-primary" type="submit"  name="submit"><i class="bx bx-edit-alt me-1"></i> Edit</button>
                           </form>
+                          <!-- DELETE -->
                           <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" >
                             <!-- Button trigger delete modal -->
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="<?php echo $row["student_number"]; ?>" onclick="confirmDelete(this);" ><i class="bx bx-trash me-1" ></i> Delete</butto>
@@ -174,13 +195,14 @@
               }
             </script>
 
+              <!-- MODAL FOR DELETE  -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Delete Record</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Delete Record</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
 
                 <div class="modal-body">
                     Would you like to delete this record?
