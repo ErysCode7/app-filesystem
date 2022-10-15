@@ -17,7 +17,7 @@ if(isset($POST["submit"])) {
 
     $fathers_name = $_POST["fathers_name"];
     $fathers_occupation = $_POST["fathers_occupation"];
-    $active_status = $_POST["active_status"];
+    $fathers_phone_number = $_POST["fathers_phone_number"];
 
     $active_status = $_POST["active_status"];
     $active_status = $_POST["active_status"];
