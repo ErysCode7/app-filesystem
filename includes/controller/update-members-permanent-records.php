@@ -11,8 +11,8 @@ if(isset($POST["submit"])) {
     $contact_number = $_POST["contact_number"];
     $troupe = $_POST["troupe"];
     $course = $_POST["course"];
-    $address = $_POST["address"];
-    $address = $_POST["address"];
+    $curriculum_year = $_POST["curriculum_year"];
+    $date_of_membership = $_POST["date_of_membership"];
 
 } else {
     $_SESSION["status"] = "Not Allowed";
