@@ -7,6 +7,9 @@ if(isset($POST["submit"])) {
     $student_number = $_POST["student_number"];
     $first_name = $_POST["first_name"];
     $last_name = $_POST["last_name"];
+    $birthday = $_POST["birthday"];
+    $contact_number = $_POST["contact_number"];
+    $address = $_POST["address"];
 
 } else {
     $_SESSION["status"] = "Not Allowed";
