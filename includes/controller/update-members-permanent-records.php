@@ -27,7 +27,18 @@ if(isset($POST["submit"])) {
     $sql = "UPDATE members_permanent_records SET student_number = ?, first_name = ?, last_name = ?, birthday = ?, contact_number = ?,
     troupe = ?, course = ?, curriculum_year = ?,  date_of_membership = ?, active_status = ?,  fathers_name = ?, fathers_occupation = ?, fathers_phone_number = ?, mothers_name = ?, mothers_occupation = ?, mothers_phone_number = ?  WHERE student_number = ?;";
 
-
+    $stmt = mysqli_stmt_init($con);
+    if(!mysqli_stmt_prepare($stmt, $sql)) {
+        $_SESSION["status"] = "Something went wrong";
+        header("Location: update-student.php?query=failed");
+        exit();
+    } else {
+        mysqli_stmt_bind_param($stmt, "ssssssss", $first_name, $last_name, $email, $birth_date, $sex, $department, $course, $student_id);
+        mysqli_stmt_execute($stmt);
+        $_SESSION["status-success"] = "Updated Successfully!";
+        header("Location: students.php?update=success");
+        exit();
+    }
 
 } else {
     $_SESSION["status"] = "Not Allowed";
