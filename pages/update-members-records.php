@@ -132,10 +132,49 @@
                     </div>
                 </div>
 
-              
+                <!-- FATHERS -->
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="fathers_name">Fathers Name</label>
+                    <div class="col-sm-10">
+                    <input type="text" name="fathers_name" id="fathers_name" value="<?= $fathers_name ?>" class="form-control"   />
+                    </div>
+                </div>
 
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="date_of_membership">Date of Membership</label>
+                    <div class="col-sm-10">
+                    <input type="text" name="date_of_membership" id="date_of_membership" value="<?= $date_of_membership ?>" class="form-control"   />
+                    </div>
+                </div>
 
-             
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="date_of_membership">Date of Membership</label>
+                    <div class="col-sm-10">
+                    <input type="text" name="date_of_membership" id="date_of_membership" value="<?= $date_of_membership ?>" class="form-control"   />
+                    </div>
+                </div>
+
+                <!-- MOTHERS -->
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="date_of_membership">Date of Membership</label>
+                    <div class="col-sm-10">
+                    <input type="text" name="date_of_membership" id="date_of_membership" value="<?= $date_of_membership ?>" class="form-control"   />
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="date_of_membership">Date of Membership</label>
+                    <div class="col-sm-10">
+                    <input type="text" name="date_of_membership" id="date_of_membership" value="<?= $date_of_membership ?>" class="form-control"   />
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <label class="col-sm-2 col-form-label" for="date_of_membership">Date of Membership</label>
+                    <div class="col-sm-10">
+                    <input type="text" name="date_of_membership" id="date_of_membership" value="<?= $date_of_membership ?>" class="form-control"   />
+                    </div>
+                </div>
                
                 <div class="row justify-content-end">
                     <div class="col-sm-10">
