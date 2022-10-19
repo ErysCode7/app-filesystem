@@ -147,9 +147,9 @@
                           <?php if($row["active_status"] === "active") { ?>
                             <span class="badge bg-success me-1"><?php echo $row["active_status"]; ?></span>
                           <?php } else if($row["active_status"] === "inactive") { ?>
-                            <span class="badge bg-danger me-1"><?php echo $row["active_status"]; ?></span>
-                          <?php } else if($row["active_status"] === "quit") { ?>
                             <span class="badge bg-warning me-1"><?php echo $row["active_status"]; ?></span>
+                          <?php } else if($row["active_status"] === "quit") { ?>
+                            <span class="badge bg-danger me-1"><?php echo $row["active_status"]; ?></span>
                           <?php } else if($row["active_status"] === "alumni" ) { ?>
                             <span class="badge bg-info me-1"><?php echo $row["active_status"]; ?></span>
                           <?php } ?>
