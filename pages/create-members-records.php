@@ -241,13 +241,13 @@
                             </div>
                         </div>
 
-                    <!-- FATHERS -->
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="fathers_name">Fathers Name</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="fathers_name" id="fathers_name" value="<?= $fathers_name ?>" class="form-control" style="color: black"   />
+                        <!-- FATHERS -->
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="fathers_name">Fathers Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="fathers_name" id="fathers_name" class="form-control" style="color: black" placeholder="Enter fathers name" />
+                            </div>
                         </div>
-                    </div>
 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="fathers_occupation">Fathers Occupation</label>
