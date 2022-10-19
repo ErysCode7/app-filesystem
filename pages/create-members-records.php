@@ -157,13 +157,7 @@
                                 <input type="text" name="student_number" id="student_number" class="form-control" style="color: black" placeholder="Enter student number"  />
                             </div>
                         </div>
-                        <div class="mb-3 row">
-                            <label for="html5-date-input" class="col-md-2 col-form-label">Date</label>
-                            <div class="col-md-10">
-                            <input class="form-control" type="date" value="2021-06-18" id="html5-date-input" />
-                            </div>
-                        </div>
-                        
+
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="first_name">First name</label>
                             <div class="col-sm-10">
@@ -178,12 +172,19 @@
                             </div>
                         </div>
 
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="birthday">Birthday</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="birthday" id="birthday" value="<?= $birthday ?>" class="form-control" style="color: black"   />
+                        <div class="mb-3 row">
+                            <label for="birthday" class="col-md-2 col-form-label">Birthday</label>
+                            <div class="col-md-10">
+                            <input class="form-control" type="date" name="birthday" value="2021-06-18" id="birthday" />
+                            </div>
                         </div>
-                    </div>
+                        
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="birthday">Birthday</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="birthday" id="birthday" class="form-control" style="color: black"  placeholder="Enter Birthdate"  />
+                            </div>
+                        </div>
 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="contact_number">Contact Number</label>
