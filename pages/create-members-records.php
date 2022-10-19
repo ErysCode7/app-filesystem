@@ -177,34 +177,39 @@
                             </div>
                         </div>
 
+                        <div class="d-flex justify-content-between align-items-center gap-3 w-full"> 
+
+                            <div class="mb-3 row">
+                                <label for="birthday" class="col-form-label">Birthday</label>
+                                <div>
+                                <input class="form-control py-3" type="date" name="birthday" value="2021-06-18" id="birthday" />
+                                </div>
+                            </div>
                             
-                        <div class="mb-3 row">
-                            <label for="birthday" class="col-form-label">Birthday</label>
-                            <div class="col-md-10">
-                            <input class="form-control py-3" type="date" name="birthday" value="2021-06-18" id="birthday" />
+                            <div class="row mb-3">
+                                <label class="col-form-label" for="birthday">Birthday</label>
+                                <div>
+                                    <input type="text" name="birthday" id="birthday" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter birth date"  />
+                                </div>
                             </div>
+
+                            <div class="row mb-3">
+                                <label class="col-form-label" for="contact_number">Contact Number</label>
+                                <div>
+                                    <input type="text" name="contact_number" id="contact_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter contact number"  />
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label class="col-form-label" for="address">Address</label>
+                                <div>
+                                    <input type="text" name="address" id="address" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter address"   />
+                                </div>
+                            </div>
+                            
                         </div>
+
                         
-                        <div class="row mb-3">
-                            <label class="col-form-label" for="birthday">Birthday</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="birthday" id="birthday" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter birth date"  />
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-form-label" for="contact_number">Contact Number</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="contact_number" id="contact_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter contact number"  />
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-form-label" for="address">Address</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="address" id="address" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter address"   />
-                            </div>
-                        </div>
 
                         <div class="row mb-3">
                             <label class="col-form-label" for="troupe">Troupe</label>
