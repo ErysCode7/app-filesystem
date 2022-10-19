@@ -182,7 +182,7 @@
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="birthday">Birthday</label>
                             <div class="col-sm-10">
-                                <input type="text" name="birthday" id="birthday" class="form-control" style="color: black" placeholder="Enter Birthdate"  />
+                                <input type="text" name="birthday" id="birthday" class="form-control" style="color: black" placeholder="Enter birth date"  />
                             </div>
                         </div>
 
@@ -196,7 +196,7 @@
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="address">Address</label>
                             <div class="col-sm-10">
-                                <input type="text" name="address" id="address" class="form-control" style="color: black" placeholder="Enter Address"   />
+                                <input type="text" name="address" id="address" class="form-control" style="color: black" placeholder="Enter address"   />
                             </div>
                         </div>
 
@@ -207,12 +207,12 @@
                             </div>
                         </div>
 
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="course">Course</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="course" id="course" value="<?= $course ?>" class="form-control" style="color: black"   />
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="course">Course</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="course" id="course" class="form-control" style="color: black" placeholder="Enter course"   />
+                            </div>
                         </div>
-                    </div>
 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="curriculum_year">Curriculum year</label>
