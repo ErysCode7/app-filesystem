@@ -281,7 +281,7 @@
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="mothers_phone_number">Mothers Phone Number</label>
                             <div class="col-sm-10">
-                                <input type="text" name="mothers_phone_number" id="mothers_phone_number" value="<?= $mothers_phone_number ?>" class="form-control" style="color: black"   />
+                                <input type="text" name="mothers_phone_number" id="mothers_phone_number" class="form-control" style="color: black" placeholder="Enter mothers phone number"   />
                             </div>
                         </div>
 
