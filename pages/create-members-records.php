@@ -256,34 +256,36 @@
                             </div>
                         </div>
 
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="fathers_phone_number">Fathers Phone Number</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="fathers_phone_number" id="fathers_phone_number" value="<?= $fathers_phone_number ?>" class="form-control" style="color: black"   />
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="fathers_phone_number">Fathers Phone Number</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="fathers_phone_number" id="fathers_phone_number" class="form-control" style="color: black" placeholder="Enter fathers phone number" />
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- MOTHERS -->
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="mothers_name">Mothers Name</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="mothers_name" id="mothers_name" value="<?= $mothers_name ?>" class="form-control" style="color: black"   />
+                        <!-- MOTHERS -->
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="mothers_name">Mothers Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="mothers_name" id="mothers_name" value="<?= $mothers_name ?>" class="form-control" style="color: black"   />
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="mothers_occupation">Mothers Occupation</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="mothers_occupation" id="mothers_occupation" value="<?= $mothers_occupation ?>" class="form-control" style="color: black"   />
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="mothers_occupation">Mothers Occupation</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="mothers_occupation" id="mothers_occupation" value="<?= $mothers_occupation ?>" class="form-control" style="color: black"   />
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="mothers_phone_number">Mothers Phone Number</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="mothers_phone_number" id="mothers_phone_number" value="<?= $mothers_phone_number ?>" class="form-control" style="color: black"   />
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="mothers_phone_number">Mothers Phone Number</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="mothers_phone_number" id="mothers_phone_number" value="<?= $mothers_phone_number ?>" class="form-control" style="color: black"   />
+                            </div>
                         </div>
-                    </div>
+
+                        
                     </form>
                 </div>
             
