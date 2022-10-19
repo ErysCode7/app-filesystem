@@ -175,6 +175,7 @@
                                     <input type="text" name="last_name" id="last_name" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter Last Name"  />
                                 </div>
                             </div>
+                            
                         </div>
 
                         <div class="d-flex justify-content-between align-items-center gap-3 w-full"> 
@@ -209,40 +210,43 @@
                             
                         </div>
 
+                        <div class="d-flex justify-content-between align-items-center gap-3 w-full">
+
+                            <!-- <div class="row mb-3 flex-grow-1">
+                                <label class="col-form-label" for="troupe">Troupe</label>
+                                <div>
+                                    <input type="text" name="troupe" id="troupe" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter troupe"   />
+                                </div>
+                            </div> -->
+
+                            <div class="row mb-3 flex-grow-1">
+                                <label class="col-form-label" for="course">Course</label>
+                                <div>
+                                    <input type="text" name="course" id="course" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter course"   />
+                                </div>
+                            </div>
+
+                            <div class="row mb-3 flex-grow-1">
+                                <label class="col-form-label" for="curriculum_year">Curriculum year</label>
+                                <div>
+                                    <input type="text" name="curriculum_year" id="curriculum_year" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter curriculum year" />
+                                </div>
+                            </div>
+
+                            <div class="row mb-3 flex-grow-1">
+                                <label class="col-form-label" for="date_of_membership">Date of Membership</label>
+                                <div>
+                                    <input type="text" name="date_of_membership" id="date_of_membership" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter date of membership"  />
+                                </div>
+                            </div>    
                         
-
-                        <div class="row mb-3">
-                            <label class="col-form-label" for="troupe">Troupe</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="troupe" id="troupe" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter troupe"   />
-                            </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label class="col-form-label" for="course">Course</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="course" id="course" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter course"   />
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-form-label" for="curriculum_year">Curriculum year</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="curriculum_year" id="curriculum_year" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter curriculum year" />
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-form-label" for="date_of_membership">Date of Membership</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="date_of_membership" id="date_of_membership"  class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter date of membership"  />
-                            </div>
-                        </div>
-
+                    
                         <div class="row mb-3">
                             <label class="col-form-label" for="active_status">Status</label>
-                            <div class="col-sm-10">
-                                    <select name="active_status" id="active_status" class="form-control py-3" style="color: black; font-size: 18px;" required>
+                            <div>
+                                <select name="active_status" id="active_status"  class="form-select form-select-lg" style="color: black; font-size: 18px;" required>
                                     <option value="">Select status</option>
                                     <option value="active">Active</option>
                                     <option value="inactive">Inactive</option>
@@ -305,6 +309,11 @@
 
                         </div>
 
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <button type="submit" name="submit" class="btn btn-primary">Add record</button>
+                            </div>
+                        </div>
                        
                       
 
