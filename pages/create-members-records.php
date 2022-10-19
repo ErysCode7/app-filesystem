@@ -200,12 +200,12 @@
                             </div>
                         </div>
 
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="troupe">Troupe</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="troupe" id="troupe" value="<?= $troupe ?>" class="form-control" style="color: black"   />
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="troupe">Troupe</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="troupe" id="troupe" class="form-control" style="color: black" placeholder="Enter troupe"   />
+                            </div>
                         </div>
-                    </div>
 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="course">Course</label>
