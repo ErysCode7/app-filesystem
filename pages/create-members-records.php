@@ -153,84 +153,88 @@
                     <form action="../includes/controller/create-members-permanent-records.php" method="post">
 
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="student_number">Student Number</label>
-                            <div class="col-sm-10">
+                            <label class="col-form-label" for="student_number">Student Number</label>
+                            <div class="">
                                 <input type="text" name="student_number" id="student_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter student number"  />
                             </div>
                         </div>
-                            
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="first_name">First name</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="first_name" id="first_name" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter First Name"   />
+                        
+                        <div class="d-flex justify-content-between align-items-center gap-3 w-full">   
+
+                            <div class="row mb-3 flex-grow-1">
+                                <label class="col-form-label" for="first_name">First name</label>
+                                <div>
+                                    <input type="text" name="first_name" id="first_name" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter First Name"   />
+                                </div>
+                            </div>
+
+                            <div class="row mb-3 flex-grow-1">
+                                <label class="col-form-label" for="last_name">Last name</label>
+                                <div>
+                                    <input type="text" name="last_name" id="last_name" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter Last Name"  />
+                                </div>
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="last_name">Last name</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="last_name" id="last_name" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter Last Name"  />
-                            </div>
-                        </div>
 
                         <div class="mb-3 row">
-                            <label for="birthday" class="col-md-2 col-form-label">Birthday</label>
+                            <label for="birthday" class="col-form-label">Birthday</label>
                             <div class="col-md-10">
                             <input class="form-control py-3" type="date" name="birthday" value="2021-06-18" id="birthday" />
                             </div>
                         </div>
                         
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="birthday">Birthday</label>
+                            <label class="col-form-label" for="birthday">Birthday</label>
                             <div class="col-sm-10">
                                 <input type="text" name="birthday" id="birthday" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter birth date"  />
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="contact_number">Contact Number</label>
+                            <label class="col-form-label" for="contact_number">Contact Number</label>
                             <div class="col-sm-10">
                                 <input type="text" name="contact_number" id="contact_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter contact number"  />
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="address">Address</label>
+                            <label class="col-form-label" for="address">Address</label>
                             <div class="col-sm-10">
                                 <input type="text" name="address" id="address" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter address"   />
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="troupe">Troupe</label>
+                            <label class="col-form-label" for="troupe">Troupe</label>
                             <div class="col-sm-10">
                                 <input type="text" name="troupe" id="troupe" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter troupe"   />
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="course">Course</label>
+                            <label class="col-form-label" for="course">Course</label>
                             <div class="col-sm-10">
                                 <input type="text" name="course" id="course" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter course"   />
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="curriculum_year">Curriculum year</label>
+                            <label class="col-form-label" for="curriculum_year">Curriculum year</label>
                             <div class="col-sm-10">
                                 <input type="text" name="curriculum_year" id="curriculum_year" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter curriculum year" />
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="date_of_membership">Date of Membership</label>
+                            <label class="col-form-label" for="date_of_membership">Date of Membership</label>
                             <div class="col-sm-10">
                                 <input type="text" name="date_of_membership" id="date_of_membership"  class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter date of membership"  />
                             </div>
                         </div>
 
                         <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="active_status">Status</label>
+                            <label class="col-form-label" for="active_status">Status</label>
                             <div class="col-sm-10">
                                     <select name="active_status" id="active_status" class="form-control py-3" style="color: black; font-size: 18px;" required>
                                     <option value="">Select status</option>
@@ -242,49 +246,61 @@
                             </div>
                         </div>
 
-                        <!-- FATHERS -->
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="fathers_name">Fathers Name</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="fathers_name" id="fathers_name" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter fathers name" />
-                            </div>
-                        </div>
 
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="fathers_occupation">Fathers Occupation</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="fathers_occupation" id="fathers_occupation" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter fathers occupation"   />
-                            </div>
-                        </div>
+                         <!-- FATHERS -->
+                        <div class="d-flex justify-content-between align-items-center gap-3 w-full">
 
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="fathers_phone_number">Fathers Phone Number</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="fathers_phone_number" id="fathers_phone_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter fathers phone number" />
+                            <div class="row mb-3 flex-grow-1">
+                                <label class="col-form-label" for="fathers_name">Fathers Name</label>
+                                <div>
+                                    <input type="text" name="fathers_name" id="fathers_name" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter fathers name" />
+                                </div>
                             </div>
-                        </div>
 
+                            <div class="row mb-3 flex-grow-1">
+                                <label class="col-form-label" for="fathers_occupation">Fathers Occupation</label>
+                                <div>
+                                    <input type="text" name="fathers_occupation" id="fathers_occupation" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter fathers occupation"   />
+                                </div>
+                            </div>
+
+                            <div class="row mb-3 flex-grow-1">
+                                <label class="col-form-label" for="fathers_phone_number">Fathers Phone Number</label>
+                                <div>
+                                    <input type="text" name="fathers_phone_number" id="fathers_phone_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter fathers phone number" />
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
                         <!-- MOTHERS -->
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="mothers_name">Mothers Name</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="mothers_name" id="mothers_name"  class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter mothers name"   />
+                        <div class="d-flex justify-content-between align-items-center gap-3 w-full">
+
+                            <div class="row mb-3">
+                                <label class="col-form-label" for="mothers_name">Mothers Name</label>
+                                <div>
+                                    <input type="text" name="mothers_name" id="mothers_name"  class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter mothers name"   />
+                                </div>
                             </div>
+
+                            <div class="row mb-3">
+                                <label class="col-form-label" for="mothers_occupation">Mothers Occupation</label>
+                                <div>
+                                    <input type="text" name="mothers_occupation" id="mothers_occupation" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter mothers occupation"  />
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <label class="col-form-label" for="mothers_phone_number">Mothers Phone Number</label>
+                                <div>
+                                    <input type="text" name="mothers_phone_number" id="mothers_phone_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter mothers phone number"   />
+                                </div>
+                            </div>
+
                         </div>
 
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="mothers_occupation">Mothers Occupation</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="mothers_occupation" id="mothers_occupation" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter mothers occupation"  />
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label class="col-sm-2 col-form-label" for="mothers_phone_number">Mothers Phone Number</label>
-                            <div class="col-sm-10">
-                                <input type="text" name="mothers_phone_number" id="mothers_phone_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter mothers phone number"   />
-                            </div>
-                        </div>
+                       
+                      
 
 
                     </form>
