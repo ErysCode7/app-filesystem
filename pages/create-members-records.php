@@ -145,9 +145,10 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
+
               <h1 class="fw-bold py-3 mb-4">Add New Record</h1>
 
-              <hr class="my-5" />
+              <hr class="my-2" />
 
                 <div class="card-body">
                     <form action="../includes/controller/create-members-permanent-records.php" method="post">
@@ -176,7 +177,7 @@
                             </div>
                         </div>
 
-
+                            
                         <div class="mb-3 row">
                             <label for="birthday" class="col-form-label">Birthday</label>
                             <div class="col-md-10">
