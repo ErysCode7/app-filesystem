@@ -156,7 +156,7 @@
                         <div class="row mb-3">
                             <label class="col-form-label" for="student_number">Student Number</label>
                             <div class="">
-                                <input type="text" name="student_number" id="student_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter student number"  />
+                                <input type="text" name="student_number" id="student_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter student number" required  />
                             </div>
                         </div>
                         
@@ -165,14 +165,14 @@
                             <div class="row mb-3 flex-grow-1">
                                 <label class="col-form-label" for="first_name">First name</label>
                                 <div>
-                                    <input type="text" name="first_name" id="first_name" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter First Name"   />
+                                    <input type="text" name="first_name" id="first_name" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter First Name" required   />
                                 </div>
                             </div>
 
                             <div class="row mb-3 flex-grow-1">
                                 <label class="col-form-label" for="last_name">Last name</label>
                                 <div>
-                                    <input type="text" name="last_name" id="last_name" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter Last Name"  />
+                                    <input type="text" name="last_name" id="last_name" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter Last Name" required  />
                                 </div>
                             </div>
                             

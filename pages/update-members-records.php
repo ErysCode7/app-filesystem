@@ -136,7 +136,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="active_status">Status</label>
                         <div class="col-sm-10">
-                                <select name="active_status" id="active_status" value="<?= $active_status ?>" class="form-control" style="color: black" required>
+                                <select name="active_status" id="active_status" value="<?= $active_status ?>"  class="form-select form-select-lg" style="color: black" required>
                                 <option value="">Select status</option>
                                 <option value="active">Active</option>
                                 <option value="inactive">Inactive</option>
