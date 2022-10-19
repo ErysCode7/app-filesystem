@@ -182,16 +182,16 @@
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="birthday">Birthday</label>
                             <div class="col-sm-10">
-                                <input type="text" name="birthday" id="birthday" class="form-control" style="color: black"  placeholder="Enter Birthdate"  />
+                                <input type="text" name="birthday" id="birthday" class="form-control" style="color: black" placeholder="Enter Birthdate"  />
                             </div>
                         </div>
 
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="contact_number">Contact Number</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="contact_number" id="contact_number" value="<?= $contact_number ?>" class="form-control" style="color: black"   />
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="contact_number">Contact Number</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="contact_number" id="contact_number" class="form-control" style="color: black" placeholder="Enter contact number"  />
+                            </div>
                         </div>
-                    </div>
 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="address">Address</label>
