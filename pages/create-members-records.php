@@ -274,7 +274,7 @@
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="mothers_occupation">Mothers Occupation</label>
                             <div class="col-sm-10">
-                                <input type="text" name="mothers_occupation" id="mothers_occupation" value="<?= $mothers_occupation ?>" class="form-control" style="color: black"   />
+                                <input type="text" name="mothers_occupation" id="mothers_occupation" class="form-control" style="color: black" placeholder="Enter mothers occupation"  />
                             </div>
                         </div>
 
