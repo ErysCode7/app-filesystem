@@ -171,12 +171,12 @@
                             </div>
                         </div>
 
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="last_name">Last name</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="last_name" id="last_name" value="<?= $last_name ?>" class="form-control" style="color: black"   />
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="last_name">Last name</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="last_name" id="last_name" class="form-control" style="color: black" placeholder="Enter Last Name"  />
+                            </div>
                         </div>
-                    </div>
 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="birthday">Birthday</label>
