@@ -163,12 +163,13 @@
                             <input class="form-control" type="date" value="2021-06-18" id="html5-date-input" />
                             </div>
                         </div>
+                        
                         <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="first_name">First name</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="first_name" id="first_name" value="<?= $first_name ?>" class="form-control" style="color: black"   />
+                            <label class="col-sm-2 col-form-label" for="first_name">First name</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="first_name" id="first_name" class="form-control" style="color: black" placeholder="Enter First Name"   />
+                            </div>
                         </div>
-                    </div>
 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="last_name">Last name</label>
