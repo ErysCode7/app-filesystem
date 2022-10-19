@@ -267,7 +267,7 @@
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="mothers_name">Mothers Name</label>
                             <div class="col-sm-10">
-                                <input type="text" name="mothers_name" id="mothers_name" value="<?= $mothers_name ?>" class="form-control" style="color: black"   />
+                                <input type="text" name="mothers_name" id="mothers_name"  class="form-control" style="color: black" placeholder="Enter mothers name"   />
                             </div>
                         </div>
 
@@ -285,7 +285,7 @@
                             </div>
                         </div>
 
-                        
+
                     </form>
                 </div>
             
