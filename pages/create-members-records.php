@@ -217,14 +217,14 @@
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="curriculum_year">Curriculum year</label>
                             <div class="col-sm-10">
-                                <input type="text" name="curriculum_year" id="curriculum_year" class="form-control" style="color: black" placeholder="Enter curriculum year"   />
+                                <input type="text" name="curriculum_year" id="curriculum_year" class="form-control" style="color: black" placeholder="Enter curriculum year" />
                             </div>
                         </div>
 
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="date_of_membership">Date of Membership</label>
                             <div class="col-sm-10">
-                                <input type="text" name="date_of_membership" id="date_of_membership" value="<?= $date_of_membership ?>" class="form-control" style="color: black"   />
+                                <input type="text" name="date_of_membership" id="date_of_membership"  class="form-control" style="color: black" placeholder="Enter date of membership"  />
                             </div>
                         </div>
 
