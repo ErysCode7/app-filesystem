@@ -193,12 +193,12 @@
                             </div>
                         </div>
 
-                    <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="address">Address</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="address" id="address" value="<?= $address ?>" class="form-control" style="color: black"   />
+                        <div class="row mb-3">
+                            <label class="col-sm-2 col-form-label" for="address">Address</label>
+                            <div class="col-sm-10">
+                                <input type="text" name="address" id="address" class="form-control" style="color: black" placeholder="Enter Address"   />
+                            </div>
                         </div>
-                    </div>
 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="troupe">Troupe</label>
