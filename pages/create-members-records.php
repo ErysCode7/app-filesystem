@@ -145,9 +145,20 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h1 class="fw-bold py-3 mb-4">Members Permanent Records</h1>
+              <h1 class="fw-bold py-3 mb-4">Add New Record</h1>
 
               <hr class="my-5" />
+
+                <div class="card-body">
+                    <form action="../includes/controller/create-members-permanent-records.php" method="post">
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label" for="student_number">Studen Number</label>
+                        <div class="col-sm-10">
+                            <input type="text" name="student_number" id="student_number" class="form-control" style="color: black"   />
+                        </div>
+                    </div>
+                    </form>
+                </div>
             
             </div>
 
