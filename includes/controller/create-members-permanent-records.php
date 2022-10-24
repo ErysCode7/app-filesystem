@@ -13,6 +13,7 @@ if(isset($_POST["submit"])) {
     $curriculum_year = $_POST["curriculum_year"];
     $date_of_membership = $_POST["date_of_membership"];
     $active_status = $_POST["active_status"];
+    $address = $_POST["address"];
 
     $fathers_name = $_POST["fathers_name"];
     $fathers_occupation = $_POST["fathers_occupation"];
@@ -38,7 +39,7 @@ if(isset($_POST["submit"])) {
         exit();
     } else {
 
-        $sql = "INSERT INTO members_permanent_records(student_number, first_name, last_name, birthday, contact_number troupe, course, curriculum_year, date_of_membership, active_status, fathers_name, fathers_occupation, fathers_phone_number, mothers_name, mothers_occupation, mothers_phone_number) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+        $sql = "INSERT INTO members_permanent_records (student_number, first_name, last_name, troupe, contact_number, course, curriculum_year, birthday, date_of_membership, address, active_status, fathers_name, fathers_occupation, fathers_phone_number, mothers_name, mothers_occupation, mothers_phone_number) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
         $stmt = mysqli_stmt_init($con);
 
@@ -47,7 +48,7 @@ if(isset($_POST["submit"])) {
             header("Location: ../../pages/create-members-records.php");
             exit();
         } else {
-            mysqli_stmt_bind_param($stmt, "ssssssssssssssss", $student_number, $first_name, $last_name, $birthday, $contact_number, $troupe, $course, $curriculum_year, $date_of_membership, $active_status, $fathers_name, $fathers_occupation, $fathers_phone_number, $mothers_name, $mothers_occupation, $mothers_phone_number);
+            mysqli_stmt_bind_param($stmt, "sssssssssssssssss", $student_number, $first_name, $last_name, $troupe, $contact_number, $course, $curriculum_year, $birthday, $date_of_membership, $address, $active_status, $fathers_name, $fathers_occupation, $fathers_phone_number, $mothers_name, $mothers_occupation, $mothers_phone_number);
             mysqli_stmt_execute($stmt);
             $_SESSION["status-success"] = "Create Member Success!";
             header("Location: ../../pages/members-permanent-records.php?create=success");
