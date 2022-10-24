@@ -148,6 +148,21 @@
 
               <h1 class="fw-bold py-3 mb-4">Add New Record</h1>
 
+              <?php
+                  if(isset($_SESSION["status"])) {
+              ?>
+              <div class="alert alert-warning">
+                  <h4><?= $_SESSION["status"]; ?></h4>
+              </div>
+              <?php unset($_SESSION["status"]); } ?>
+              <?php 
+                  if(isset($_SESSION["status-success"])) {
+              ?>
+              <div class="alert alert-success">
+                  <h4><?= $_SESSION["status-success"]; ?></h4>
+              </div>
+              <?php unset($_SESSION["status-success"]); } ?>
+
               <hr class="my-2" />
 
                 <div class="card-body">
@@ -180,12 +195,12 @@
 
                         <div class="d-flex justify-content-between align-items-center gap-3 w-full"> 
 
-                            <div class="mb-3 row">
+                            <!-- <div class="mb-3 row">
                                 <label for="birthday" class="col-form-label">Birthday</label>
                                 <div>
                                 <input class="form-control py-3" type="date" name="birthday" value="2021-06-18" id="birthday" />
                                 </div>
-                            </div>
+                            </div> -->
                             
                             <div class="row mb-3">
                                 <label class="col-form-label" for="birthday">Birthday</label>
@@ -212,12 +227,12 @@
 
                         <div class="d-flex justify-content-between align-items-center gap-3 w-full">
 
-                            <!-- <div class="row mb-3 flex-grow-1">
+                            <div class="row mb-3 flex-grow-1">
                                 <label class="col-form-label" for="troupe">Troupe</label>
                                 <div>
                                     <input type="text" name="troupe" id="troupe" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter troupe"   />
                                 </div>
-                            </div> -->
+                            </div>
 
                             <div class="row mb-3 flex-grow-1">
                                 <label class="col-form-label" for="course">Course</label>

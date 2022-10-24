@@ -23,8 +23,6 @@ if(isset($_POST["submit"])) {
     $mothers_occupation = $_POST["mothers_occupation"];
     $mothers_phone_number = $_POST["mothers_phone_number"];
     
-    echo $student_number;
-    
     $sql = "UPDATE members_permanent_records SET student_number = ?, first_name = ?, last_name = ?, birthday = ?, contact_number = ?, troupe = ?, course = ?, curriculum_year = ?, date_of_membership = ?, active_status = ?, fathers_name = ?, fathers_occupation = ?, fathers_phone_number = ?, mothers_name = ?, mothers_occupation = ?, mothers_phone_number = ?  WHERE student_number = '$student_number';";
 
     $stmt = mysqli_stmt_init($con);
