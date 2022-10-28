@@ -6,6 +6,7 @@
 
 <?php 
     if(isset($_POST["submit"])) {
+        $id = $_POST["id"];
         $student_number = $_POST["student_number"];
         $first_name = $_POST["first_name"];
         $last_name = $_POST["last_name"];
@@ -62,7 +63,7 @@
             </div>
             <div class="card-body">
                 <form action="../includes/controller/update-members-permanent-records.php" method="post">
-               
+                    <input type="hidden" name="id" value="<?= $id ?>">    
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="student_number">Studen Number</label>
                         <div class="col-sm-10">
