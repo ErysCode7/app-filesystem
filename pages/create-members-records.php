@@ -169,7 +169,7 @@
                     <form action="../includes/controller/create-members-permanent-records.php" method="post">
 
                         <div class="row mb-3">
-                            <label class="col-form-label" for="student_number">Student Number</label>
+                            <label class="h4" for="student_number">Student Number</label>
                             <div class="">
                                 <input type="text" name="student_number" id="student_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter student number" required  />
                             </div>
@@ -178,14 +178,14 @@
                         <div class="d-flex justify-content-between align-items-center gap-3 w-full">   
 
                             <div class="row mb-3 flex-grow-1">
-                                <label class="col-form-label" for="first_name">First name</label>
+                                <label class="h4" for="first_name">First name</label>
                                 <div>
                                     <input type="text" name="first_name" id="first_name" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter First Name" required   />
                                 </div>
                             </div>
 
                             <div class="row mb-3 flex-grow-1">
-                                <label class="col-form-label" for="last_name">Last name</label>
+                                <label class="h4" for="last_name">Last name</label>
                                 <div>
                                     <input type="text" name="last_name" id="last_name" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter Last Name" required  />
                                 </div>
@@ -193,31 +193,31 @@
                             
                         </div>
 
-                        <div class="d-flex justify-content-between align-items-center gap-3 w-full"> 
+                        <div class="d-flex justify-content-between align-items-center gap-3 w-full flex-wrap"> 
 
                             <!-- <div class="mb-3 row">
-                                <label for="birthday" class="col-form-label">Birthday</label>
+                                <label for="birthday" class="h4">Birthday</label>
                                 <div>
                                 <input class="form-control py-3" type="date" name="birthday" value="2021-06-18" id="birthday" />
                                 </div>
                             </div> -->
                             
-                            <div class="row mb-3">
-                                <label class="col-form-label" for="birthday">Birthday</label>
+                            <div class="row mb-3  flex-grow-1">
+                                <label class="h4" for="birthday">Birthday</label>
                                 <div>
                                     <input type="date" name="birthday" id="birthday" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter birth date"  />
                                 </div>
                             </div>
 
-                            <div class="row mb-3">
-                                <label class="col-form-label" for="contact_number">Contact Number</label>
+                            <div class="row mb-3  flex-grow-1">
+                                <label class="h4" for="contact_number">Contact Number</label>
                                 <div>
                                     <input type="text" name="contact_number" id="contact_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter contact number"  />
                                 </div>
                             </div>
 
-                            <div class="row mb-3">
-                                <label class="col-form-label" for="address">Address</label>
+                            <div class="row mb-3  flex-grow-1">
+                                <label class="h4" for="address">Address</label>
                                 <div>
                                     <input type="text" name="address" id="address" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter address"   />
                                 </div>
@@ -225,31 +225,31 @@
                             
                         </div>
 
-                        <div class="d-flex justify-content-between align-items-center gap-3 w-full">
+                        <div class="d-flex justify-content-between align-items-center gap-3 w-full flex-wrap">
 
                             <div class="row mb-3 flex-grow-1">
-                                <label class="col-form-label" for="troupe">Troupe</label>
+                                <label class="h4" for="troupe">Troupe</label>
                                 <div>
                                     <input type="text" name="troupe" id="troupe" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter troupe"   />
                                 </div>
                             </div>
 
                             <div class="row mb-3 flex-grow-1">
-                                <label class="col-form-label" for="course">Course</label>
+                                <label class="h4" for="course">Course</label>
                                 <div>
                                     <input type="text" name="course" id="course" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter course"   />
                                 </div>
                             </div>
 
                             <div class="row mb-3 flex-grow-1">
-                                <label class="col-form-label" for="curriculum_year">Curriculum year</label>
+                                <label class="h4" for="curriculum_year">Curriculum year</label>
                                 <div>
                                     <input type="text" name="curriculum_year" id="curriculum_year" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter curriculum year" />
                                 </div>
                             </div>
 
                             <div class="row mb-3 flex-grow-1">
-                                <label class="col-form-label" for="date_of_membership">Date of Membership</label>
+                                <label class="h4" for="date_of_membership">Date of Membership</label>
                                 <div>
                                     <input type="text" name="date_of_membership" id="date_of_membership" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter date of membership"  />
                                 </div>
@@ -259,7 +259,7 @@
 
                     
                         <div class="row mb-3">
-                            <label class="col-form-label" for="active_status">Status</label>
+                            <label class="h4" for="active_status">Status</label>
                             <div>
                                 <select name="active_status" id="active_status"  class="form-select form-select-lg" style="color: black; font-size: 18px;" required>
                                     <option value="">Select status</option>
@@ -273,24 +273,24 @@
 
 
                          <!-- FATHERS -->
-                        <div class="d-flex justify-content-between align-items-center gap-3 w-full">
+                        <div class="d-flex justify-content-between align-items-center gap-3 w-full flex-wrap">
 
                             <div class="row mb-3 flex-grow-1">
-                                <label class="col-form-label" for="fathers_name">Fathers Name</label>
+                                <label class="h4" for="fathers_name">Fathers Name</label>
                                 <div>
                                     <input type="text" name="fathers_name" id="fathers_name" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter fathers name" />
                                 </div>
                             </div>
 
                             <div class="row mb-3 flex-grow-1">
-                                <label class="col-form-label" for="fathers_occupation">Fathers Occupation</label>
+                                <label class="h4" for="fathers_occupation">Fathers Occupation</label>
                                 <div>
                                     <input type="text" name="fathers_occupation" id="fathers_occupation" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter fathers occupation"   />
                                 </div>
                             </div>
 
                             <div class="row mb-3 flex-grow-1">
-                                <label class="col-form-label" for="fathers_phone_number">Fathers Phone Number</label>
+                                <label class="h4" for="fathers_phone_number">Fathers Phone Number</label>
                                 <div>
                                     <input type="text" name="fathers_phone_number" id="fathers_phone_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter fathers phone number" />
                                 </div>
@@ -299,24 +299,24 @@
                         </div>
                         
                         <!-- MOTHERS -->
-                        <div class="d-flex justify-content-between align-items-center gap-3 w-full">
+                        <div class="d-flex justify-content-between align-items-center gap-3 w-full flex-wrap">
 
-                            <div class="row mb-3">
-                                <label class="col-form-label" for="mothers_name">Mothers Name</label>
+                            <div class="row mb-3 flex-grow-1">
+                                <label class="h4" for="mothers_name">Mothers Name</label>
                                 <div>
                                     <input type="text" name="mothers_name" id="mothers_name"  class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter mothers name"   />
                                 </div>
                             </div>
 
-                            <div class="row mb-3">
-                                <label class="col-form-label" for="mothers_occupation">Mothers Occupation</label>
+                            <div class="row mb-3 flex-grow-1">
+                                <label class="h4" for="mothers_occupation">Mothers Occupation</label>
                                 <div>
                                     <input type="text" name="mothers_occupation" id="mothers_occupation" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter mothers occupation"  />
                                 </div>
                             </div>
 
-                            <div class="row mb-3">
-                                <label class="col-form-label" for="mothers_phone_number">Mothers Phone Number</label>
+                            <div class="row mb-3 flex-grow-1">
+                                <label class="h4" for="mothers_phone_number">Mothers Phone Number</label>
                                 <div>
                                     <input type="text" name="mothers_phone_number" id="mothers_phone_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter mothers phone number"   />
                                 </div>
