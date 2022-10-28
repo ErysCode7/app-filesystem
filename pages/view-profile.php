@@ -137,6 +137,7 @@ if(isset($_GET["student_number"])) {
                 <p class="mb-0">Birthday</p>
               </div>
               <div class="col-sm-9">
+                <p>Year-Month-Date</p>
                 <p class=" mb-0 h6 text-dark"><?= $row["birthday"] ?></p>
               </div>
             </div>

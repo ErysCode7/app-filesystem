@@ -205,7 +205,7 @@
                             <div class="row mb-3">
                                 <label class="col-form-label" for="birthday">Birthday</label>
                                 <div>
-                                    <input type="text" name="birthday" id="birthday" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter birth date"  />
+                                    <input type="date" name="birthday" id="birthday" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter birth date"  />
                                 </div>
                             </div>
 

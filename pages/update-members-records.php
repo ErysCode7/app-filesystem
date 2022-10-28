@@ -88,7 +88,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="birthday">Birthday</label>
                         <div class="col-sm-10">
-                            <input type="text" name="birthday" id="birthday" value="<?= $birthday ?>" class="form-control" style="color: black"   />
+                            <input type="date" name="birthday" id="birthday" value="<?= $birthday ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
