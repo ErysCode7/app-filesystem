@@ -91,31 +91,23 @@
         </a>
     </li>
 
-
-
+    <!-- EVENTS -->
     <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons bx bx-dock-top"></i>
-        <div data-i18n="Account Settings">Account Settings</div>
+        <a href="./events.php" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-calendar-event"></i>
+        <div data-i18n="Members Permanent Records">Events</div>
         </a>
-        <ul class="menu-sub">
-        <li class="menu-item">
-            <a href="pages-account-settings-account.html" class="menu-link">
-            <div data-i18n="Account">Account</div>
-            </a>
-        </li>
-        <li class="menu-item">
-            <a href="pages-account-settings-notifications.html" class="menu-link">
-            <div data-i18n="Notifications">Notifications</div>
-            </a>
-        </li>
-        <li class="menu-item">
-            <a href="pages-account-settings-connections.html" class="menu-link">
-            <div data-i18n="Connections">Connections</div>
-            </a>
-        </li>
-        </ul>
     </li>
+
+    <!-- VENUES -->
+    <li class="menu-item">
+        <a href="./venues.php" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-location-plus"></i>
+        <div data-i18n="Members Permanent Records">Venues</div>
+        </a>
+    </li>
+
+   
     
 
     
