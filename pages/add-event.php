@@ -159,42 +159,49 @@
               <hr class="my-2" />
 
                 <div class="card-body">
-                    <form action="../includes/controller/create-members-permanent-records.php" method="post">
+                    <form action="../includes/controller/events/create-events.php" method="post">
+
 
                         <div class="row mb-3">
-                            <label class="h4" for="event">Event</label>
+                            <label class="h4" for="event">Venue</label>
                             <div class="">
-                                <input type="text" name="event" id="event" class="form-control py-3" style="color: black; font-size: 18px;" required  />
+                                <input type="text" name="event" id="event" class="form-control py-3" style="color: black; font-size: 18px;" />
+                            </div>
+                        </div>
+
+                        <div class="row mb-3 flex-grow-1">
+                            <label class="h4" for="time">Time</label>
+                            <div>
+                                <input type="text" name="time" id="time" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter First Name"  />
                             </div>
                         </div>
                         
-                    
-
-                            <div class="row mb-3 flex-grow-1">
-                                <label class="h4" for="schedule">Schedule</label>
-                                <div>
-                                    <input type="date" name="schedule" id="schedule" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter First Name" required   />
-                                </div>
+                        <div class="row mb-3 flex-grow-1">
+                            <label class="h4" for="schedule">Schedule</label>
+                            <div>
+                                <input type="date" name="schedule" id="schedule" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter First Name"  />
                             </div>
+                        </div>
 
-                            <div class="row mb-3 flex-grow-1">
-                                <label class="h4" for="event_title">Event Title</label>
-                                <div>
-                                    <input type="text" name="event_title" id="event_title" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="" required  />
-                                </div>
+                        <div class="row mb-3 flex-grow-1">
+                            <label class="h4" for="event_title">Event Title</label>
+                            <div>
+                                <input type="text" name="event_title" id="event_title" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="" required />
                             </div>
+                        </div>
 
-                            <div class="row mb-3 flex-grow-1">
-                                <label class="h4" for="description">Description</label>
-                                <div>
-                                    <textarea name="" id="" cols="5" rows="3" name="description" id="description" class="form-control" style="color: black; font-size: 18px;"></textarea>
-                                </div>
+                        <div class="row mb-3 flex-grow-1">
+                            <label class="h4" for="description">Description</label>
+                            <div>
+                                <textarea cols="5" rows="3" name="description" id="description" class="form-control" style="color: black; font-size: 18px;"></textarea>
+                        
                             </div>
-                                
+                        </div>
+                            
 
                         <div class="row">
                             <div class="col-sm-10">
-                                <button type="submit" name="submit" class="btn btn-primary">Add record</button>
+                                <button type="submit" name="submit" class="btn btn-primary" style="width: 300px;">Add Event</button>
                             </div>
                         </div>
                        

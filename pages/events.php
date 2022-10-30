@@ -191,7 +191,7 @@
                     <tbody class="table-border-bottom-0">
                       <tr>
                         <td><a href="./view-events.php?id=<?= $row["id"]; ?>">View Event</td>
-                        <td><?php echo $row["schedule"]; ?></td>
+                        <td><?php echo $row["schedule"]; ?>  <span style="color: black; font-weight: bold;"><?php echo $row["time"]; ?> <span></td>
                         <td>
                             <?php echo $row["event"]; ?>
                         </td>
@@ -244,7 +244,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <form action="../includes/controller/delete-events.php" method="post" id="form-delete-user">         
+                    <form action="../includes/controller/events/delete-events.php" method="post" id="form-delete-user">         
                       <button type="submit" name="submit" class="btn btn-danger">Delete</button>
                       <input type="hidden" name="id">
                     </form>
