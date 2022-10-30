@@ -140,7 +140,11 @@
             <div class="container-xxl flex-grow-1 container-p-y">
               <h1 class="fw-bold py-3 mb-4">List of Events</h1>
 
+            
+
               <hr class="my-5" />
+
+            
 
               <?php
                   if(isset($_SESSION["status"])) {
@@ -159,7 +163,11 @@
 
               <!-- Hoverable Table rows -->
               <div class="card">
-                <h5 class="card-header">Hoverable rows</h5>
+                
+                <h5 class="card-header">Events</h5>
+                <div style="position: absolute; right: 20px; top: 20px;">
+                  <button class="btn btn-primary"><i class="menu-icon tf-icons bx bx-plus"></i> Add Event </button>
+                </div>
                 <div class="table-responsive">
                   <table class="table table-hover">
                     <thead>
