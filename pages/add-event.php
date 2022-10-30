@@ -98,14 +98,14 @@
             </li>
 
             <!-- ADD NEW RECORDS -->
-            <li class="menu-item">
+            <li class="menu-item ">
                 <a href="./create-members-records.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-plus"></i>
                 <div data-i18n="Members Permanent Records">Add New Record</div>
                 </a>
             </li>
 
-            <!-- EVENTS -->
+             <!-- EVENTS -->
             <li class="menu-item active">
                 <a href="./events.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-calendar-event"></i>
@@ -121,30 +121,25 @@
                 </a>
             </li>
 
+
             </ul>
         </aside>
         <!-- / SIDEBAR -->
 
         <!-- Layout container -->
         <div class="layout-page">
-          <!-- Navbar -->
 
-          <?php require "../includes/view/navbar.php"; ?>
-
-          <!-- / Navbar -->
-
+        <!-- / Navbar -->
+        <?php require "../includes/view/navbar.php"; ?>
+        <!-- / Navbar -->
+        
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h1 class="fw-bold py-3 mb-4">List of Events</h1>
 
-            
-
-              <hr class="my-5" />
-
-            
+              <h1 class="fw-bold py-3 mb-4">Add New Event</h1>
 
               <?php
                   if(isset($_SESSION["status"])) {
@@ -161,99 +156,57 @@
               </div>
               <?php unset($_SESSION["status-success"]); } ?>
 
-              <!-- Hoverable Table rows -->
-              <div class="card">
-                
-                <h5 class="card-header">Events</h5>
-                <div style="position: absolute; right: 20px; top: 20px;">
-                <a href="./add-event.php">
-                  <button class="btn btn-primary">
-                    <i class="menu-icon tf-icons bx bx-plus"></i> Add Event</button></a> 
-                </div>
-                <div class="table-responsive">
-                  <table class="table table-hover">
-                    <thead>
-                      <tr>
-                        <th>Details</th>
-                        <th>Schedule</th>
-                        <th>Venue</th>
-                        <!-- <th>Event Information</th> -->
-                        <th>Description</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    <?php 
-                      require "../includes/model/connection.php";
-                      $sql = "SELECT * FROM events";
-                      $result = $con->query($sql);
-                    ?>
-                    <?php while($row = $result->fetch_assoc()) { ?>
-                    <tbody class="table-border-bottom-0">
-                      <tr>
-                        <td><a href="./view-events.php?id=<?= $row["id"]; ?>">View Event</td>
-                        <td><?php echo $row["schedule"]; ?></td>
-                        <td>
-                            <?php echo $row["event"]; ?>
-                        </td>
-                        <td style="width: 500px; margin: 0 auto;">
-                            <?php echo $row["description"]; ?>
-                        </td>
-                        <td class="d-flex align-items-center gap-2">
-                          <!-- UPDATE -->
-                          <form action="" method="post">
-                            <!-- UPDATING FIELDS PASSING IT TO ANOTHER FORM -->   
-                           
+              <hr class="my-2" />
 
-                            <button class="btn btn-primary" type="submit"  name="submit"><i class="bx bx-edit-alt me-1"></i> Edit</button>
-                          </form>
-                          <!-- DELETE -->
-                          <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" >
-                            <!-- Button trigger delete modal -->
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="<?php echo $row["id"]; ?>" onclick="confirmDelete(this);" ><i class="bx bx-trash me-1" ></i> Delete</butto>
-                            <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
-                          </form> 
-                        </td>
-                      </tr>
-                    </tbody>
-                    <?php } ?>     
-                  </table>
-                </div>
-            </div>
+                <div class="card-body">
+                    <form action="../includes/controller/create-members-permanent-records.php" method="post">
 
-            <script>
-              function confirmDelete(self) {
-                const id = self.getAttribute("data-id");
+                        <div class="row mb-3">
+                            <label class="h4" for="event">Event</label>
+                            <div class="">
+                                <input type="text" name="event" id="event" class="form-control py-3" style="color: black; font-size: 18px;" required  />
+                            </div>
+                        </div>
+                        
+                    
 
-                document.getElementById("form-delete-user").id.value = id;
-                $("#myModal").modal("show");
+                            <div class="row mb-3 flex-grow-1">
+                                <label class="h4" for="schedule">Schedule</label>
+                                <div>
+                                    <input type="date" name="schedule" id="schedule" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter First Name" required   />
+                                </div>
+                            </div>
 
-                
-              }
-            </script>
+                            <div class="row mb-3 flex-grow-1">
+                                <label class="h4" for="event_title">Event Title</label>
+                                <div>
+                                    <input type="text" name="event_title" id="event_title" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="" required  />
+                                </div>
+                            </div>
 
-               <!-- MODAL FOR DELETE  -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Delete Record</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                <div class="modal-body">
-                    Would you like to delete this record? 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <form action="../includes/controller/delete-events.php" method="post" id="form-delete-user">         
-                      <button type="submit" name="submit" class="btn btn-danger">Delete</button>
-                      <input type="hidden" name="id">
+                            <div class="row mb-3 flex-grow-1">
+                                <label class="h4" for="description">Description</label>
+                                <div>
+                                    <textarea name="" id="" cols="5" rows="3" name="description" id="description" class="form-control" style="color: black; font-size: 18px;"></textarea>
+                                </div>
+                            </div>
+                                
+
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <button type="submit" name="submit" class="btn btn-primary">Add record</button>
+                            </div>
+                        </div>
+                       
+                      
+
+
                     </form>
-                  </div>
                 </div>
-              </div>
+            
             </div>
 
-          </div>
+        </div>
           
           <!--/ Hoverable Table rows -->
           
