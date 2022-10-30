@@ -142,6 +142,74 @@
 
               <hr class="my-5" />
 
+              <?php
+                  if(isset($_SESSION["status"])) {
+              ?>
+              <div class="alert alert-warning">
+                  <h4><?= $_SESSION["status"]; ?></h4>
+              </div>
+              <?php unset($_SESSION["status"]); } ?>
+              <?php 
+                  if(isset($_SESSION["status-success"])) {
+              ?>
+              <div class="alert alert-success">
+                  <h4><?= $_SESSION["status-success"]; ?></h4>
+              </div>
+              <?php unset($_SESSION["status-success"]); } ?>
+
+              <!-- Hoverable Table rows -->
+              <div class="card">
+                <h5 class="card-header">Hoverable rows</h5>
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr>
+                        <th>Details</th>
+                        <th>Schedule</th>
+                        <th>Venue</th>
+                        <!-- <th>Event Information</th> -->
+                        <th>Description</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <?php 
+                      require "../includes/model/connection.php";
+                      $sql = "SELECT * FROM events";
+                      $result = $con->query($sql);
+                    ?>
+                    <?php while($row = $result->fetch_assoc()) { ?>
+                    <tbody class="table-border-bottom-0">
+                      <tr>
+                        <td><a href="./view-events.php?id=<?= $row["id"]; ?>">View Event</td>
+                        <td><?php echo $row["schedule"]; ?></td>
+                        <td>
+                            <?php echo $row["event"]; ?>
+                        </td>
+                        <td style="width: 500px; margin: 0 auto;">
+                            <?php echo $row["description"]; ?>
+                        </td>
+                        <td class="d-flex align-items-center gap-2">
+                          <!-- UPDATE -->
+                          <form action="" method="post">
+                            <!-- UPDATING FIELDS PASSING IT TO ANOTHER FORM -->   
+                           
+
+                            <button class="btn btn-primary" type="submit"  name="submit"><i class="bx bx-edit-alt me-1"></i> Edit</button>
+                          </form>
+                          <!-- DELETE -->
+                          <form method="post" action="" >
+                            <!-- Button trigger delete modal -->
+                            <button type="button" class="btn btn-danger"><i class="bx bx-trash me-1"></i> Delete</button>
+                            <input type="hidden" name="student_number" value="<?php echo "nan"; ?>">
+                          </form> 
+                        </td>
+                      </tr>
+                    </tbody>
+                    <?php } ?>     
+                  </table>
+                </div>
+            </div>
+
           </div>
           
           <!--/ Hoverable Table rows -->
