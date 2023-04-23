@@ -19,7 +19,7 @@ if(isset($_POST["submit"])) {
         header("Location: ../../pages/update-event.php?query=failed");
         exit();
     } else {
-        mysqli_stmt_bind_param($stmt, "sssssssssssssssss", $event, $event_title, $time, $schedule);
+        mysqli_stmt_bind_param($stmt, "sssss", $event, $event_title, $description, $time, $schedule);
         mysqli_stmt_execute($stmt);
         $_SESSION["status-success"] = "Updated Successfully!";
         header("Location: ../../../pages/events.php?update=success");

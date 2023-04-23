@@ -77,7 +77,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="event_title">Event Title</label>
                         <div class="col-sm-10">
-                            <input type="text" name="time" id="time" value="<?=$event_title?>" class="form-control" style="color: black"   />
+                            <input type="text" name="event_title" id="event_title" value="<?=$event_title?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
