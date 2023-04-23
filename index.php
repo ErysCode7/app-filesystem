@@ -81,7 +81,7 @@
 
                 </div>
 
-                <p>No account? click <a class="text-uppercase fw-bold mb-2 mt-4" type="submit">here</a> to sign up.</p>
+                <p>No account? click <a class="text-uppercase fw-bold mb-2 mt-4" href="./pages/sign-up.php">here</a> to sign up.</p>
                 
               </form>
             </div>

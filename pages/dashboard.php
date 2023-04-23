@@ -72,7 +72,7 @@
                       <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                      <form action="../includes/logout.php" method="GET">                    
+                      <form action="../includes/controller/logout.php" method="GET">                    
                         <p class="dropdown-item cursor-pointer">
                           <i class="bx bx-power-off me-2"></i>
                           <button class="align-middle btn">Log Out</button>
