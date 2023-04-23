@@ -184,7 +184,7 @@
                     </thead>
                     <?php 
                       require "../includes/model/connection.php";
-                      $sql = "SELECT * FROM events";
+                      $sql = "SELECT * FROM events order by id desc";
                       $result = $con->query($sql);
                     ?>
                     <?php while($row = $result->fetch_assoc()) { ?>
@@ -200,9 +200,14 @@
                         </td>
                         <td class="d-flex align-items-center gap-2">
                           <!-- UPDATE -->
-                          <form action="" method="post">
+                          <form action="update-event.php" method="post">
                             <!-- UPDATING FIELDS PASSING IT TO ANOTHER FORM -->   
-                           
+                            <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
+                            <input type="hidden" name="event" value="<?php echo $row["event"]; ?>">
+                            <input type="hidden" name="time" value="<?php echo $row["time"]; ?>">
+                            <input type="hidden" name="schedule" value="<?php echo $row["schedule"]; ?>">
+                            <input type="hidden" name="event_title" value="<?php echo $row["event_title"]; ?>">
+                            <input type="hidden" name="description" value="<?php echo $row["description"]; ?>">
 
                             <button class="btn btn-primary" type="submit"  name="submit"><i class="bx bx-edit-alt me-1"></i> Edit</button>
                           </form>

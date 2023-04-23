@@ -172,21 +172,21 @@
                         <div class="row mb-3 flex-grow-1">
                             <label class="h4" for="time">Time</label>
                             <div>
-                                <input type="text" name="time" id="time" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter First Name"  />
+                                <input type="time" name="time" id="time" class="form-control py-3" style="color: black; font-size: 18px;"  />
                             </div>
                         </div>
                         
                         <div class="row mb-3 flex-grow-1">
                             <label class="h4" for="schedule">Schedule</label>
                             <div>
-                                <input type="date" name="schedule" id="schedule" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter First Name"  />
+                                <input type="date" name="schedule" id="schedule" class="form-control py-3" style="color: black; font-size: 18px;" />
                             </div>
                         </div>
 
                         <div class="row mb-3 flex-grow-1">
                             <label class="h4" for="event_title">Event Title</label>
                             <div>
-                                <input type="text" name="event_title" id="event_title" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="" required />
+                                <input type="text" name="event_title" id="event_title" class="form-control py-3" style="color: black; font-size: 18px;"required />
                             </div>
                         </div>
 
