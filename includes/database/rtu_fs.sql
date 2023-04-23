@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3308
--- Generation Time: Oct 30, 2022 at 05:53 PM
+-- Generation Time: Apr 23, 2023 at 05:56 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.1
 
@@ -39,7 +39,8 @@ CREATE TABLE `administrator` (
 --
 
 INSERT INTO `administrator` (`id`, `name`, `username`, `password`) VALUES
-(1, 'Erys', 'admin', '$2y$12$yjn.g4FtUoXrOqqNMka/Mu/4tq7Brp7Q.aAILGCrjpw.iHKas/uC.');
+(1, 'Erys', 'admin', '$2y$12$yjn.g4FtUoXrOqqNMka/Mu/4tq7Brp7Q.aAILGCrjpw.iHKas/uC.'),
+(4, 'asd', 'sample', '$2y$10$6muFOVGR8Bt.831oyutrYeoXJ6gH11xKzc4uU71rvgPGnEoTx3PHq');
 
 -- --------------------------------------------------------
 
@@ -49,7 +50,7 @@ INSERT INTO `administrator` (`id`, `name`, `username`, `password`) VALUES
 
 CREATE TABLE `events` (
   `id` int(11) NOT NULL,
-  `venue_id` int(11) NOT NULL,
+  `troup_id` int(11) NOT NULL,
   `event` varchar(255) NOT NULL,
   `event_title` varchar(255) DEFAULT NULL,
   `description` varchar(80) DEFAULT NULL,
@@ -62,10 +63,10 @@ CREATE TABLE `events` (
 -- Dumping data for table `events`
 --
 
-INSERT INTO `events` (`id`, `venue_id`, `event`, `event_title`, `description`, `time`, `schedule`, `banner_img`) VALUES
-(1, 1, 'Sample Event', 'Event title', 'Event with the rtu team and main team', '5:30 AM', NULL, NULL),
-(9, 0, 'Taguig City', 'asda', NULL, '5:30 AM', '2022-11-05', NULL),
-(10, 0, 'Taguig City', 'Ttile', 'My heart which is the way of typing speed of the cause My heart which is', '5:30 AM', '2022-10-06', NULL);
+INSERT INTO `events` (`id`, `troup_id`, `event`, `event_title`, `description`, `time`, `schedule`, `banner_img`) VALUES
+(10, 0, 'Taguig City', 'Ttile', 'My heart which is the way of typing speed of the cause My heart which is', '5:30 AM', '2022-10-06', NULL),
+(11, 0, 'haha', 'qwe', 'jdgfgkfgk', '23:22', '2023-04-24', NULL),
+(12, 0, 'asdasd', 'asdasd', 'asdasd', '', '0000-00-00', NULL);
 
 -- --------------------------------------------------------
 
@@ -81,6 +82,13 @@ CREATE TABLE `members_image` (
   `status` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `members_image`
+--
+
+INSERT INTO `members_image` (`id`, `name`, `image_directory`, `student_number`, `status`) VALUES
+(16, 'Woman_hero', 'uploads/woman_hero.png', '2018-205404', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -89,6 +97,7 @@ CREATE TABLE `members_image` (
 
 CREATE TABLE `members_permanent_records` (
   `id` int(11) NOT NULL,
+  `troup_id` int(11) NOT NULL,
   `student_number` varchar(255) NOT NULL,
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
@@ -112,12 +121,33 @@ CREATE TABLE `members_permanent_records` (
 -- Dumping data for table `members_permanent_records`
 --
 
-INSERT INTO `members_permanent_records` (`id`, `student_number`, `first_name`, `last_name`, `troupe`, `contact_number`, `course`, `curriculum_year`, `birthday`, `date_of_membership`, `address`, `active_status`, `fathers_name`, `fathers_occupation`, `fathers_phone_number`, `mothers_name`, `mothers_occupation`, `mothers_phone_number`) VALUES
-(1, '2018-205404', 'Aeriel', 'Cruz', 'Dulaang Rizal', '09323715302', 'BS-INFORMATION-TECHNOLOGY', 2018, '1999-11-19', '', '177 I. Lopez Street Baranggay Poblacion Mandaluyong City', 'active', 'Ariel Cruz', 'Security Guard', '09485176599', 'Jocelyn Cruz', 'Housewife', '09475176599'),
-(2, '2019', 'Marijo', 'Correra', 'Dulaang Rizalia', '09323544210', 'BS-INFORMATION-TECHNOLOGY', NULL, '0000-00-00', 'June 2017', '88 225 Aglipay St. Brgy Poblacion Mandaluyong City', 'active', 'Jose Correra', 'Head Chef', NULL, 'Rosemarie Correra', NULL, '09152663175'),
-(2024, '2412', 'Erys', 'asdasd', '', '', '', 0, '0000-00-00', '', '', 'active', '', '', '', '', '', ''),
-(2025, '4324', '345345', '345345', '', '', '', 0, '0000-00-00', '', '', 'alumni', '', '', '', '', '', ''),
-(2026, '4234', 'qweqwe', 'qweqwe', '', '', '', 0, '0000-00-00', '', '', 'inactive', '', '', '', '', '', '');
+INSERT INTO `members_permanent_records` (`id`, `troup_id`, `student_number`, `first_name`, `last_name`, `troupe`, `contact_number`, `course`, `curriculum_year`, `birthday`, `date_of_membership`, `address`, `active_status`, `fathers_name`, `fathers_occupation`, `fathers_phone_number`, `mothers_name`, `mothers_occupation`, `mothers_phone_number`) VALUES
+(1, 1, '2018-205404', 'Aeriel', 'Cruz', 'Dulaang Rizal', '09323715302', 'BS-INFORMATION-TECHNOLOGY', 2018, '1999-11-19', '', '177 I. Lopez Street Baranggay Poblacion Mandaluyong City', 'active', 'Ariel Cruz', 'Security Guard', '09485176599', 'Jocelyn Cruz', 'Housewife', '09475176599'),
+(2, 1, '2019', 'Marijo', 'Correra', 'Dulaang Rizalia', '09323544210', 'BS-INFORMATION-TECHNOLOGY', NULL, '0000-00-00', 'June 2017', '88 225 Aglipay St. Brgy Poblacion Mandaluyong City', 'active', 'Jose Correra', 'Head Chef', NULL, 'Rosemarie Correra', NULL, '09152663175'),
+(2033, 1, '23', 'asd', '', 'Dulaang Rizalia', '', '', NULL, '0000-00-00', NULL, '', '', NULL, NULL, NULL, NULL, NULL, NULL),
+(2034, 2, 'asd', 'asd', 'asdasdasd', 'Sining Biswal', '', '', 0, '0000-00-00', '', '', 'quit', '', '', '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `troupes`
+--
+
+CREATE TABLE `troupes` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `troupes`
+--
+
+INSERT INTO `troupes` (`id`, `name`) VALUES
+(1, 'Dulaang Rizalia'),
+(2, 'Sining Biswal'),
+(3, 'Tunog Rizalia Rondalla'),
+(4, 'Himig Rizalia'),
+(5, 'Kultura Rizalia');
 
 --
 -- Indexes for dumped tables
@@ -145,6 +175,13 @@ ALTER TABLE `members_image`
 -- Indexes for table `members_permanent_records`
 --
 ALTER TABLE `members_permanent_records`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `troup_id` (`troup_id`);
+
+--
+-- Indexes for table `troupes`
+--
+ALTER TABLE `troupes`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -155,25 +192,41 @@ ALTER TABLE `members_permanent_records`
 -- AUTO_INCREMENT for table `administrator`
 --
 ALTER TABLE `administrator`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `members_image`
 --
 ALTER TABLE `members_image`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `members_permanent_records`
 --
 ALTER TABLE `members_permanent_records`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2027;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2035;
+
+--
+-- AUTO_INCREMENT for table `troupes`
+--
+ALTER TABLE `troupes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `members_permanent_records`
+--
+ALTER TABLE `members_permanent_records`
+  ADD CONSTRAINT `troup_id` FOREIGN KEY (`troup_id`) REFERENCES `troupes` (`id`) ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

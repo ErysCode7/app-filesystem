@@ -22,6 +22,8 @@ if(isset($_POST["submit"])) {
     $mothers_name = $_POST["mothers_name"];
     $mothers_occupation = $_POST["mothers_occupation"];
     $mothers_phone_number = $_POST["mothers_phone_number"];
+    
+    $troup_id = 0;
 
     echo $student_number;
 
@@ -39,7 +41,19 @@ if(isset($_POST["submit"])) {
         exit();
     } else {
 
-        $sql = "INSERT INTO members_permanent_records (student_number, first_name, last_name, troupe, contact_number, course, curriculum_year, birthday, date_of_membership, address, active_status, fathers_name, fathers_occupation, fathers_phone_number, mothers_name, mothers_occupation, mothers_phone_number) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
+        if($troupe === 'Dulaang Rizalia') {
+            $troup_id = 1;
+        } else if($troupe === 'Sining Biswal') {
+            $troup_id = 2;
+        } else if($troupe === 'Tunog Rizalia Rondalla') {
+            $troup_id = 3;
+        } else if($troupe === 'Himig Rizalia') {
+            $troup_id = 4;
+        } else if($troupe === 'Kultura Rizalia') {
+            $troup_id = 5;
+        }
+
+        $sql = "INSERT INTO members_permanent_records (troup_id, student_number, first_name, last_name, troupe, contact_number, course, curriculum_year, birthday, date_of_membership, address, active_status, fathers_name, fathers_occupation, fathers_phone_number, mothers_name, mothers_occupation, mothers_phone_number) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
         $stmt = mysqli_stmt_init($con);
 
@@ -48,7 +62,7 @@ if(isset($_POST["submit"])) {
             header("Location: ../../pages/create-members-records.php");
             exit();
         } else {
-            mysqli_stmt_bind_param($stmt, "sssssssssssssssss", $student_number, $first_name, $last_name, $troupe, $contact_number, $course, $curriculum_year, $birthday, $date_of_membership, $address, $active_status, $fathers_name, $fathers_occupation, $fathers_phone_number, $mothers_name, $mothers_occupation, $mothers_phone_number);
+            mysqli_stmt_bind_param($stmt, "ssssssssssssssssss", $troup_id, $student_number, $first_name, $last_name, $troupe, $contact_number, $course, $curriculum_year, $birthday, $date_of_membership, $address, $active_status, $fathers_name, $fathers_occupation, $fathers_phone_number, $mothers_name, $mothers_occupation, $mothers_phone_number);
             mysqli_stmt_execute($stmt);
             $_SESSION["status-success"] = "Create Member Success!";
             header("Location: ../../pages/members-permanent-records.php?create=success");

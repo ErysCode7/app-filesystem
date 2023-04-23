@@ -222,8 +222,18 @@
 
                             <div class="row mb-3 flex-grow-1">
                                 <label class="h4" for="troupe">Troupe</label>
-                                <div>
+                                <!-- <div>
                                     <input type="text" name="troupe" id="troupe" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter troupe"   />
+                                </div> -->
+                                <div>
+                                    <select name="troupe" id="troupe" class="form-control py-3" style="color: black; font-size: 18px;" required>
+                                        <option value="">Select troupe</option>
+                                        <option value="Dulaang Rizalia">Dulaang Rizalia</option>
+                                        <option value="Sining Biswal">Sining Biswal</option>
+                                        <option value="Tunog Rizalia Rondalla">Tunog Rizalia Rondalla</option>
+                                        <option value="Himig Rizalia">Himig Rizalia</option>
+                                        <option value="Kultura Rizalia">Kultura Rizalia</option>
+                                    </select>
                                 </div>
                             </div>
 
