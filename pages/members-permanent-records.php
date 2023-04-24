@@ -155,7 +155,7 @@
                 <div style="position: absolute; right: 20px; top: 20px;">
                 <a href="./create-members-records.php">
                   <button class="btn btn-primary">
-                    <i class="menu-icon tf-icons bx bx-plus"></i> Add Event</button></a> 
+                    <i class="menu-icon tf-icons bx bx-plus"></i> Add Members</button></a> 
                 </div>
                 <div class="table-responsive">
                   <table class="table table-hover">
@@ -163,10 +163,10 @@
                       <tr>
                         <th>Details</th>
                         <th>Student Number</th>
+                        <th>Troupe</th>
                         <th>Full name</th>
                         <th>Status</th>
                         <th>Contact Number</th>
-                        <th>Course</th>
                         <th>Actions</th>
                       </tr>
                     </thead>
@@ -180,6 +180,7 @@
                       <tr>
                         <td><a href="./view-profile.php?student_number=<?= $row["student_number"]; ?>">View Details</td>
                         <td><?php echo $row["student_number"]; ?></td>
+                        <td><?php echo $row["troupe"]; ?></td>
                         <td>
                         <?php echo $row["first_name"]; ?>
                         <?php echo $row["last_name"]; ?>
@@ -196,12 +197,13 @@
                           <?php } ?>
                         </td>
                         <td><?php echo $row["contact_number"]; ?></td>
-                        <td><?php echo $row["course"]; ?></td>
+                     
                         <td class="d-flex align-items-center gap-2">
                           <!-- UPDATE -->
                           <form action="./update-members-records.php" method="post">
                             <!-- UPDATING FIELDS PASSING IT TO ANOTHER FORM -->   
                             <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
+                            <input type="hidden" name="id" value="<?php echo $row["troup_id"]; ?>">
                             <input type="hidden" name="student_number" value="<?php echo $row["student_number"]; ?>">
                             <input type="hidden" name="first_name" value="<?php echo $row["first_name"]; ?>">
                             <input type="hidden" name="last_name" value="<?php echo $row["last_name"]; ?>">

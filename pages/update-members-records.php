@@ -110,7 +110,14 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="troupe">Troupe</label>
                         <div class="col-sm-10">
-                            <input type="text" name="troupe" id="troupe" value="<?= $troupe ?>" class="form-control" style="color: black"   />
+                            <select name="troupe" id="troupe" class="form-control" style="color: black" required>
+                                <option value="">Select troupe</option>
+                                <option value="Dulaang Rizalia">Dulaang Rizalia</option>
+                                <option value="Sining Biswal">Sining Biswal</option>
+                                <option value="Tunog Rizalia Rondalla">Tunog Rizalia Rondalla</option>
+                                <option value="Himig Rizalia">Himig Rizalia</option>
+                                <option value="Kultura Rizalia">Kultura Rizalia</option>
+                            </select>
                         </div>
                     </div>
 

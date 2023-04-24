@@ -55,7 +55,7 @@ if(isset($_GET["student_number"])) {
                   <img src="./upload/<?= $rowImage["image_directory"]; ?>" alt="Profile Image" class="profile-image rounded-circle img-fluid" style="width: 150px;">
             <?php } ?>
             <h5 class="my-3"><?= $row["first_name"] ?> <?= $row["last_name"] ?></h5>
-            <div class="d-flex flex-wrap  justify-content-center mb-2">
+            <div class="d-flex flex-wrap justify-content-center mb-2">
               <form action="./upload/members-upload.php" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="student_number" id="student_number" value="<?= $row["student_number"]; ?>"> 
                 <div class="input-group my-3">
@@ -92,12 +92,6 @@ if(isset($_GET["student_number"])) {
                   <h4><?= $_SESSION["status-success"]; ?></h4>
             </div>
             <?php unset($_SESSION["status-success"]); } ?>
-
-            <div class="d-flex justify-content-center mb-2">
-              <button type="button" class="btn btn-primary">Follow</button>
-              <button type="button" class="btn btn-outline-primary ms-1">Message</button>
-            </div>
-            
           </div>
         </div>
       </div>

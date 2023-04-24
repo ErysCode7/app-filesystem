@@ -182,7 +182,7 @@
                     <?php while($row = $result->fetch_assoc()) { ?>
                     <tbody class="table-border-bottom-0">
                       <tr>
-                        <td><a href="./view-events.php?id=<?= $row["id"]; ?>">View Event</td>
+                        <td><a href="./view-event.php?id=<?= $row["id"]; ?>">View Event</td>
                         <td><?php echo $row["schedule"]; ?>  <span style="color: black; font-weight: bold;"><?php echo $row["time"]; ?> <span></td>
                         <td>
                             <?php echo $row["event"]; ?>

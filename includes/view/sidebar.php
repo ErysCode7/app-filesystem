@@ -91,14 +91,6 @@
         </a>
     </li> 
 
-    <!-- EVENTS -->
-    <li class="menu-item">
-        <a href="./events.php" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-calendar-event"></i>
-        <div data-i18n="Events">Events</div>
-        </a>
-    </li>
-
     <!-- TROUPES -->
     <li class="menu-item">
         <a href="./troupes.php" class="menu-link">
@@ -106,10 +98,6 @@
         <div data-i18n="Troupes">Troupes</div>
         </a>
     </li>
-
-   
-    
-
-    
+  
     </ul>
 </aside>
