@@ -113,15 +113,6 @@
                 </a>
             </li>
 
-            <!-- VENUES -->
-            <li class="menu-item">
-                <a href="./venues.php" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-location-plus"></i>
-                <div data-i18n="Members Permanent Records">Venues</div>
-                </a>
-            </li>
-
-
             </ul>
         </aside>
         <!-- / SIDEBAR -->

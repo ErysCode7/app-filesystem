@@ -97,19 +97,6 @@
         <i class="menu-icon tf-icons bx bx-calendar-event"></i>
         <div data-i18n="Members Permanent Records">Events</div>
         </a>
-    </li>
-
-    <!-- VENUES -->
-    <li class="menu-item">
-        <a href="./venues.php" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-location-plus"></i>
-        <div data-i18n="Members Permanent Records">Venues</div>
-        </a>
-    </li>
-
-   
-    
-
-    
+    </li> 
     </ul>
 </aside>
