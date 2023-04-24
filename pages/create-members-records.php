@@ -97,14 +97,6 @@
                 </a>
             </li>
 
-            <!-- ADD NEW RECORDS -->
-            <li class="menu-item active">
-                <a href="./create-members-records.php" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-plus"></i>
-                <div data-i18n="Members Permanent Records">Add New Record</div>
-                </a>
-            </li>
-
              <!-- EVENTS -->
             <li class="menu-item">
                 <a href="./events.php" class="menu-link">
