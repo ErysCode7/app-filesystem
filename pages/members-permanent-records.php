@@ -97,14 +97,6 @@
                 </a>
             </li>
 
-            <!-- ADD NEW RECORDS -->
-            <li class="menu-item">
-                <a href="./create-members-records.php" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-plus"></i>
-                <div data-i18n="Members Permanent Records">Add New Record</div>
-                </a>
-            </li>
-
             <!-- EVENTS -->
             <li class="menu-item">
                 <a href="./events.php" class="menu-link">
@@ -151,7 +143,12 @@
               <!-- Hoverable Table rows -->
               <div class="card">
                 <h5 class="card-header">Members</h5>
-                <div class="table-responsive text-nowrap">
+                <div style="position: absolute; right: 20px; top: 20px;">
+                <a href="./create-members-records.php">
+                  <button class="btn btn-primary">
+                    <i class="menu-icon tf-icons bx bx-plus"></i> Add Event</button></a> 
+                </div>
+                <div class="table-responsive">
                   <table class="table table-hover">
                     <thead>
                       <tr>

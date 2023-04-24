@@ -83,13 +83,13 @@
         </a>
     </li>
 
-
+    <!-- EVENTS -->
     <li class="menu-item">
-        <a href="./create-members-records.php" class="menu-link">
-        <i class="menu-icon tf-icons bx bx-plus"></i>
-        <div data-i18n="Members Permanent Records">Add New Record</div>
+        <a href="./events.php" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-calendar-event"></i>
+        <div data-i18n="Members Permanent Records">Events</div>
         </a>
-    </li>
+    </li> 
 
     <!-- EVENTS -->
     <li class="menu-item">
