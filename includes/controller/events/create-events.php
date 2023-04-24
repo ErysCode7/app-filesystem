@@ -26,7 +26,7 @@ if(isset($_POST["submit"])) {
         } else {
             mysqli_stmt_bind_param($stmt, "sssss", $event, $event_title, $description, $time, $schedule);
             mysqli_stmt_execute($stmt);
-            $_SESSION["status-success"] = "Create Member Success!";
+            $_SESSION["status-success"] = "Create Event Success!";
             header("Location: ../../../pages/events.php?create=success");
             exit();
         }
