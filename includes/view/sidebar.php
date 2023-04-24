@@ -71,7 +71,7 @@
     <li class="menu-item active">
         <a href="dashboard.php" class="menu-link">
         <i class="menu-icon tf-icons bx bx-home-circle"></i>
-        <div data-i18n="Analytics">Dashboard</div>
+        <div data-i18n="Dashboard">Dashboard</div>
         </a>
     </li>
 
@@ -95,8 +95,21 @@
     <li class="menu-item">
         <a href="./events.php" class="menu-link">
         <i class="menu-icon tf-icons bx bx-calendar-event"></i>
-        <div data-i18n="Members Permanent Records">Events</div>
+        <div data-i18n="Events">Events</div>
         </a>
-    </li> 
+    </li>
+
+    <!-- TROUPES -->
+    <li class="menu-item">
+        <a href="./troupes.php" class="menu-link">
+        <i class="menu-icon tf-icons bx bx-location-plus"></i>
+        <div data-i18n="Troupes">Troupes</div>
+        </a>
+    </li>
+
+   
+    
+
+    
     </ul>
 </aside>

@@ -104,6 +104,15 @@
                 <div data-i18n="Members Permanent Records">Events</div>
                 </a>
             </li>
+
+             <!-- TROUPES -->
+            <li class="menu-item">
+                <a href="./troupes.php" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-location-plus"></i>
+                <div data-i18n="Troupes">Troupes</div>
+                </a>
+            </li> 
+
             </ul>
         </aside>
         <!-- / SIDEBAR -->
