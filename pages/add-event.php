@@ -131,7 +131,7 @@
 
             <div class="container-xxl flex-grow-1 container-p-y">
 
-              <h1 class="fw-bold py-3 mb-4">Add New Event</h1>
+              <h1 class="fw-bold">Create Event</h1>
 
               <?php
                   if(isset($_SESSION["status"])) {

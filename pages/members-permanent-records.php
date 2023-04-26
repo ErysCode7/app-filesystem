@@ -130,9 +130,9 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h1 class="fw-bold py-3 mb-4">Members Permanent Records</h1>
+              <h1 class="fw-bold">Members Permanent Records</h1>
 
-              <hr class="my-5" />
+              <hr/>
 
               <?php
                   if(isset($_SESSION["status"])) {
