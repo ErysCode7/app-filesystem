@@ -6,7 +6,21 @@
  require "../includes/view/header.php";
 ?>
 
-  
+<?php
+
+if(isset($_POST["submit"])) {
+    require "../includes/model/connection.php";
+    $id = $_POST["id"];
+    $troupes_name = $_POST["name"];
+    $sql = "SELECT * FROM events WHERE troup_id = '$id';";
+    $result = $con->query($sql);
+ 
+    $row = $result->fetch_assoc();
+    // print_r($row["name"]); die();
+ }
+
+?>
+
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
@@ -98,7 +112,7 @@
             </li>
             
             <!-- EVENTS -->
-            <li class="menu-item active">
+            <li class="menu-item">
                 <a href="./events.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-calendar-event"></i>
                 <div data-i18n="Events">Events</div>
@@ -106,7 +120,7 @@
             </li>
 
              <!-- TROUPES -->
-            <li class="menu-item">
+            <li class="menu-item active">
                 <a href="./troupes.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-location-plus"></i>
                 <div data-i18n="Troupes">Troupes</div>
@@ -130,42 +144,20 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h1 class="fw-bold">List of Events</h1>
+              <h1 class="fw-bold"><?=$_POST["name"]?></h1>
 
             
 
               <hr/>
 
-            
-
-              <?php
-                  if(isset($_SESSION["status"])) {
-              ?>
-              <div class="alert alert-warning">
-                  <h4><?= $_SESSION["status"]; ?></h4>
-              </div>
-              <?php unset($_SESSION["status"]); } ?>
-              <?php 
-                  if(isset($_SESSION["status-success"])) {
-              ?>
-              <div class="alert alert-success">
-                  <h4><?= $_SESSION["status-success"]; ?></h4>
-              </div>
-              <?php unset($_SESSION["status-success"]); } ?>
-
               <!-- Hoverable Table rows -->
               <div class="card">
                 
-                <h5 class="card-header">Events</h5>
-                <div style="position: absolute; right: 20px; top: 20px;">
-                <a href="./add-event.php">
-                  <button class="btn btn-primary">
-                    <i class="menu-icon tf-icons bx bx-plus"></i> Add Event</button></a> 
-                </div>
+              <h5 class="card-header">Events</h5>
                 <div class="table-responsive">
                   <table class="table table-hover">
                     <thead>
-                      <tr>
+                    <tr>
                         <th>Details</th>
                         <th>Schedule</th>
                         <th>Venue</th>
@@ -176,13 +168,13 @@
                     </thead>
                     <?php 
                       require "../includes/model/connection.php";
-                      $sql = "SELECT * FROM events order by id desc";
+                      $sql = "SELECT * FROM events where troup_id= '$id' order by id desc";
                       $result = $con->query($sql);
                     ?>
                     <?php while($row = $result->fetch_assoc()) { ?>
                     <tbody class="table-border-bottom-0">
                       <tr>
-                        <td><a href="./view-event.php?id=<?= $row["id"]; ?>">View Event</td>
+                      <td><a href="./view-event.php?id=<?= $row["id"]; ?>">View Event</td>
                         <td><?php echo $row["schedule"]; ?>  <span style="color: black; font-weight: bold;"><?php echo $row["time"]; ?> <span></td>
                         <td>
                             <?php echo $row["event"]; ?>
@@ -215,39 +207,9 @@
                     <?php } ?>     
                   </table>
                 </div>
-            </div>
-
-            <script>
-              function confirmDelete(self) {
-                const id = self.getAttribute("data-id");
-
-                document.getElementById("form-delete-user").id.value = id;
-                $("#myModal").modal("show");
-
                 
-              }
-            </script>
-
-               <!-- MODAL FOR DELETE  -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Delete Record</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                <div class="modal-body">
-                    Would you like to delete this record? 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <form action="../includes/controller/events/delete-events.php" method="post" id="form-delete-user">         
-                      <button type="submit" name="submit" class="btn btn-danger">Delete</button>
-                      <input type="hidden" name="id">
-                    </form>
-                  </div>
-                </div>
-              </div>
+              
+                
             </div>
 
           </div>

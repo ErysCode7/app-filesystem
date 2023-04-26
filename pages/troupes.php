@@ -130,11 +130,11 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h1 class="fw-bold py-3 mb-4">List of Troupes</h1>
+              <h1 class="fw-bold">List of Troupes</h1>
 
             
 
-              <hr class="my-5" />
+              <hr/>
 
             
 
@@ -166,8 +166,10 @@
                   <table class="table table-hover">
                     <thead>
                       <tr>
-                        <th>Details</th>
                         <th>Troupes</th>
+                        <th>Members</th>
+                        <th>Events</th>
+                        <th>Actions</th>
                       </tr>
                     </thead>
                     <?php 
@@ -178,12 +180,30 @@
                     <?php while($row = $result->fetch_assoc()) { ?>
                     <tbody class="table-border-bottom-0">
                       <tr>
-                        <td><a href="./view-troupes.php?id=<?= $row["id"]; ?>">View Troupes</td>
+    
                         <td>
                             <?php echo $row["name"]; ?>
                         </td>
-                  
-                        <td class="d-flex align-items-center justify-content-end gap-2">
+
+                        <td >
+                          <form action="view-troupe-member.php" method="post">
+                            <!-- PASSING IT TO ANOTHER FORM -->   
+                            <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
+                            <input type="hidden" name="name" value="<?php echo $row["name"]; ?>">
+                            <button class="btn btn-success" type="submit"  name="submit"> View Member</button>
+                          </form>
+                        </td>
+
+                        <td>
+                          <form action="view-troupe-event.php" method="post">
+                            <!-- PASSING IT TO ANOTHER FORM -->   
+                            <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
+                            <input type="hidden" name="name" value="<?php echo $row["name"]; ?>">
+                            <button class="btn btn-success" type="submit"  name="submit"> View Event</button>
+                          </form>
+                        </td>
+
+                        <td class="d-flex align-items-center gap-2">
                           <!-- UPDATE -->
                           <form action="update-troupes.php" method="post">
                             <!-- UPDATING FIELDS PASSING IT TO ANOTHER FORM -->   

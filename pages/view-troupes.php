@@ -6,7 +6,19 @@
  require "../includes/view/header.php";
 ?>
 
-  
+<?php
+
+if(isset($_GET["id"])) {
+    require "../includes/model/connection.php";
+    $id = $_GET["id"];
+    $sql = "SELECT * FROM troupes WHERE id = '$id';";
+    $result = $con->query($sql);
+ 
+    $row = $result->fetch_assoc();
+ }
+
+?>
+
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
@@ -98,7 +110,7 @@
             </li>
             
             <!-- EVENTS -->
-            <li class="menu-item active">
+            <li class="menu-item">
                 <a href="./events.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-calendar-event"></i>
                 <div data-i18n="Events">Events</div>
@@ -106,7 +118,7 @@
             </li>
 
              <!-- TROUPES -->
-            <li class="menu-item">
+            <li class="menu-item active">
                 <a href="./troupes.php" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-location-plus"></i>
                 <div data-i18n="Troupes">Troupes</div>
@@ -130,124 +142,25 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h1 class="fw-bold">List of Events</h1>
+              <h1 class="fw-bold"><?=$row['name']?></h1>
 
             
 
               <hr/>
 
-            
-
-              <?php
-                  if(isset($_SESSION["status"])) {
-              ?>
-              <div class="alert alert-warning">
-                  <h4><?= $_SESSION["status"]; ?></h4>
-              </div>
-              <?php unset($_SESSION["status"]); } ?>
-              <?php 
-                  if(isset($_SESSION["status-success"])) {
-              ?>
-              <div class="alert alert-success">
-                  <h4><?= $_SESSION["status-success"]; ?></h4>
-              </div>
-              <?php unset($_SESSION["status-success"]); } ?>
-
               <!-- Hoverable Table rows -->
               <div class="card">
-                
-                <h5 class="card-header">Events</h5>
+                <div class="card-header"></div>
                 <div style="position: absolute; right: 20px; top: 20px;">
-                <a href="./add-event.php">
-                  <button class="btn btn-primary">
-                    <i class="menu-icon tf-icons bx bx-plus"></i> Add Event</button></a> 
+                <a href="./view-troupe-member.php?id=<?= $row["id"]; ?>">
+                  <button class="btn btn-primary">View Members</button></a> 
+                    <a href="./view-troupe-event.php?id=<?= $row["id"]; ?>">
+                  <button class="btn btn-primary">View Events</button></a> 
                 </div>
-                <div class="table-responsive">
-                  <table class="table table-hover">
-                    <thead>
-                      <tr>
-                        <th>Details</th>
-                        <th>Schedule</th>
-                        <th>Venue</th>
-                        <!-- <th>Event Information</th> -->
-                        <th>Description</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    <?php 
-                      require "../includes/model/connection.php";
-                      $sql = "SELECT * FROM events order by id desc";
-                      $result = $con->query($sql);
-                    ?>
-                    <?php while($row = $result->fetch_assoc()) { ?>
-                    <tbody class="table-border-bottom-0">
-                      <tr>
-                        <td><a href="./view-event.php?id=<?= $row["id"]; ?>">View Event</td>
-                        <td><?php echo $row["schedule"]; ?>  <span style="color: black; font-weight: bold;"><?php echo $row["time"]; ?> <span></td>
-                        <td>
-                            <?php echo $row["event"]; ?>
-                        </td>
-                        <td style="width: 500px; margin: 0 auto;">
-                            <?php echo $row["description"]; ?>
-                        </td>
-                        <td class="d-flex align-items-center gap-2">
-                          <!-- UPDATE -->
-                          <form action="update-event.php" method="post">
-                            <!-- UPDATING FIELDS PASSING IT TO ANOTHER FORM -->   
-                            <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
-                            <input type="hidden" name="event" value="<?php echo $row["event"]; ?>">
-                            <input type="hidden" name="time" value="<?php echo $row["time"]; ?>">
-                            <input type="hidden" name="schedule" value="<?php echo $row["schedule"]; ?>">
-                            <input type="hidden" name="event_title" value="<?php echo $row["event_title"]; ?>">
-                            <input type="hidden" name="description" value="<?php echo $row["description"]; ?>">
-
-                            <button class="btn btn-primary" type="submit"  name="submit"><i class="bx bx-edit-alt me-1"></i> Edit</button>
-                          </form>
-                          <!-- DELETE -->
-                          <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" >
-                            <!-- Button trigger delete modal -->
-                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="<?php echo $row["id"]; ?>" onclick="confirmDelete(this);" ><i class="bx bx-trash me-1" ></i> Delete</butto>
-                            <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
-                          </form> 
-                        </td>
-                      </tr>
-                    </tbody>
-                    <?php } ?>     
-                  </table>
-                </div>
-            </div>
-
-            <script>
-              function confirmDelete(self) {
-                const id = self.getAttribute("data-id");
-
-                document.getElementById("form-delete-user").id.value = id;
-                $("#myModal").modal("show");
-
+                <div class="card-header"></div>
                 
-              }
-            </script>
-
-               <!-- MODAL FOR DELETE  -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Delete Record</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                  </div>
-                <div class="modal-body">
-                    Would you like to delete this record? 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <form action="../includes/controller/events/delete-events.php" method="post" id="form-delete-user">         
-                      <button type="submit" name="submit" class="btn btn-danger">Delete</button>
-                      <input type="hidden" name="id">
-                    </form>
-                  </div>
-                </div>
-              </div>
+              
+                
             </div>
 
           </div>
