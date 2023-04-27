@@ -8,16 +8,11 @@
 
 <?php
 
-if(isset($_POST["submit"])) {
     require "../includes/model/connection.php";
-    $id = $_POST["id"];
-    $troupes_name = $_POST["name"];
-    $sql = "SELECT * FROM events WHERE troup_id = '$id';";
+    $id = $_GET["id"];
+    $sql = "SELECT * FROM troupes WHERE id = '$id';";
     $result = $con->query($sql);
- 
     $row = $result->fetch_assoc();
-    // print_r($row["name"]); die();
- }
 
 ?>
 
@@ -144,7 +139,7 @@ if(isset($_POST["submit"])) {
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h1 class="fw-bold"><?=$_POST["name"]?></h1>
+              <h1 class="fw-bold"><?=$row["name"]?></h1>
 
             
 
@@ -184,9 +179,10 @@ if(isset($_POST["submit"])) {
                         </td>
                         <td class="d-flex align-items-center gap-2">
                           <!-- UPDATE -->
-                          <form action="update-event.php" method="post">
+                          <form action="update-troupe-event.php" method="post">
                             <!-- UPDATING FIELDS PASSING IT TO ANOTHER FORM -->   
                             <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
+                            <input type="hidden" name="troup_id" value="<?php echo $row["troup_id"]; ?>">
                             <input type="hidden" name="event" value="<?php echo $row["event"]; ?>">
                             <input type="hidden" name="time" value="<?php echo $row["time"]; ?>">
                             <input type="hidden" name="schedule" value="<?php echo $row["schedule"]; ?>">

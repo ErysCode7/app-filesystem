@@ -166,9 +166,8 @@
                   <table class="table table-hover">
                     <thead>
                       <tr>
+                        <th>Details</th>
                         <th>Troupes</th>
-                        <th>Members</th>
-                        <th>Events</th>
                         <th>Actions</th>
                       </tr>
                     </thead>
@@ -180,27 +179,9 @@
                     <?php while($row = $result->fetch_assoc()) { ?>
                     <tbody class="table-border-bottom-0">
                       <tr>
-    
+                        <td><a href="./view-troupes.php?id=<?= $row["id"]; ?>">View Troupes</td>
                         <td>
                             <?php echo $row["name"]; ?>
-                        </td>
-
-                        <td >
-                          <form action="view-troupe-member.php" method="post">
-                            <!-- PASSING IT TO ANOTHER FORM -->   
-                            <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
-                            <input type="hidden" name="name" value="<?php echo $row["name"]; ?>">
-                            <button class="btn btn-success" type="submit"  name="submit"> View Member</button>
-                          </form>
-                        </td>
-
-                        <td>
-                          <form action="view-troupe-event.php" method="post">
-                            <!-- PASSING IT TO ANOTHER FORM -->   
-                            <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
-                            <input type="hidden" name="name" value="<?php echo $row["name"]; ?>">
-                            <button class="btn btn-success" type="submit"  name="submit"> View Event</button>
-                          </form>
                         </td>
 
                         <td class="d-flex align-items-center gap-2">

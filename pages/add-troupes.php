@@ -131,7 +131,7 @@
 
             <div class="container-xxl flex-grow-1 container-p-y">
 
-              <h1 class="fw-bold py-3 mb-4">Add New Troupes</h1>
+              <h1 class="fw-bold">Add New Troupes</h1>
 
               <?php
                   if(isset($_SESSION["status"])) {
@@ -148,7 +148,7 @@
               </div>
               <?php unset($_SESSION["status-success"]); } ?>
 
-              <hr class="my-2" />
+              <hr />
 
                 <div class="card-body">
                     <form action="../includes/controller/troupes/create-troupes.php" method="post">
@@ -158,6 +158,20 @@
                             <label class="h4" for="troupes_name">Troupes</label>
                             <div class="">
                                 <input type="text" name="troupes_name" id="troupes_name" class="form-control py-3" style="color: black; font-size: 18px;" />
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="h4" for="troupes_heading">Title</label>
+                            <div class="">
+                                <input type="text" name="troupes_heading" id="troupes_heading" class="form-control py-3" style="color: black; font-size: 18px;" />
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="h4" for="troupe_description">Description</label>
+                            <div class="">
+                                <textarea name="troupe_description" id="troupe_description" class="form-control py-3" style="color: black; font-size: 18px;" id="exampleTextarea" rows="3"></textarea>
                             </div>
                         </div>
                     

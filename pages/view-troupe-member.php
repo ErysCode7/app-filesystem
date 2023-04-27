@@ -8,16 +8,11 @@
 
 <?php
 
-if(isset($_POST["submit"])) {
     require "../includes/model/connection.php";
-    $id = $_POST["id"];
-    $troupes_name = $_POST["name"];
-    $sql = "SELECT * FROM members_permanent_records WHERE troup_id = '$id';";
+    $id = $_GET["id"];
+    $sql = "SELECT * FROM troupes WHERE id = '$id';";
     $result = $con->query($sql);
- 
     $row = $result->fetch_assoc();
-    // print_r($row["name"]); die();
- }
 
 ?>
 
@@ -144,7 +139,7 @@ if(isset($_POST["submit"])) {
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <h1 class="fw-bold"><?=$_POST["name"]?></h1>
+              <h1 class="fw-bold"><?=$row["name"]?></h1>
 
             
 
@@ -153,7 +148,7 @@ if(isset($_POST["submit"])) {
               <!-- Hoverable Table rows -->
               <div class="card">
                 
-              <h5 class="card-header">Events</h5>
+              <h5 class="card-header">Troupe Members</h5>
                 <div class="table-responsive">
                   <table class="table table-hover">
                     <thead>
@@ -198,10 +193,10 @@ if(isset($_POST["submit"])) {
 
                         <td class="d-flex align-items-center gap-2">
                           <!-- UPDATE -->
-                          <form action="./update-members-records.php" method="post">
+                          <form action="./update-troupe-members.php" method="post">
                             <!-- UPDATING FIELDS PASSING IT TO ANOTHER FORM -->   
                             <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
-                            <input type="hidden" name="id" value="<?php echo $row["troup_id"]; ?>">
+                            <input type="hidden" name="troup_id" value="<?php echo $row["troup_id"]; ?>">
                             <input type="hidden" name="student_number" value="<?php echo $row["student_number"]; ?>">
                             <input type="hidden" name="first_name" value="<?php echo $row["first_name"]; ?>">
                             <input type="hidden" name="last_name" value="<?php echo $row["last_name"]; ?>">
