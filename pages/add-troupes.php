@@ -163,7 +163,7 @@
                     
                         <div class="row">
                             <div class="col-sm-10">
-                                <button type="submit" name="submit" class="btn btn-primary" style="width: 300px;">Add Event</button>
+                                <button type="submit" name="submit" class="btn btn-primary" style="width: 300px;">Add Troupes</button>
                             </div>
                         </div>
                        

@@ -29,9 +29,10 @@ if(isset($_GET["id"])) {
         </nav>
       </div>
     </div>
-    <div class="d-flex justify-content-center mb-5">
+    <div class="d-flex align-items-center justify-content-center mb-3">
       <img src='../assets/img/event-banner.jpg' alt="" style="width: 80%; height: 450px; border-radius: 0.5rem; magin: 0 auto;  object-fit: cover; ">
     </div>
+    <p clas="mb-3" style="font-size: 16px;">Event description is a written or verbal summary that provides information about a particular event, such as a conference, concert, festival, workshop, or any other gathering. It typically includes details about the event, such as the name, date, time, location, target audience, and purpose, as well as any additional information that is relevant to attendees. The purpose of an event description is to attract and inform potential attendees about the event, and to generate interest and excitement in the lead-up to the event. A well-crafted event description can help to ensure that the right people attend the event and that they are fully engaged and informed about what to expect.</p>
 
     <div class="d-flex justify-content-start mb-5">
       <img src='../assets/img/event-banner-1.jpg' alt="" style="width: 500px; height: 300px; border-radius: 0.5rem; magin: 0 auto; object-fit: cover;  ">

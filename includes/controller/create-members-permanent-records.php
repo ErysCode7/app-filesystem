@@ -25,8 +25,6 @@ if(isset($_POST["submit"])) {
     
     $troup_id = 0;
 
-    echo $student_number;
-
     if(empty($student_number) || empty($first_name) || empty($last_name)) {
         $_SESSION["status"] = "Fill Empty Fields";
         header("Location: ../../pages/create-members-records.php");
