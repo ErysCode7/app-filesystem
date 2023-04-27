@@ -52,7 +52,7 @@
                     <div class="row mb-3">
                         <label class="h4" for="troupes_name">Troupes</label>
                         <div class="">
-                            <input type="troupes_name" value="<?=$troupes_name?>" name="troupes_name" id="troupes_name" class="form-control py-3" style="color: black; font-size: 18px;" />
+                            <input type="troupes_name" value="<?=$troupes_name?>" name="troupes_name" maxlength="50" id="troupes_name" class="form-control py-3" style="color: black; font-size: 18px;" />
                         </div>
                     </div>
                 

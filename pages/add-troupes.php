@@ -174,6 +174,13 @@
                                 <textarea name="troupe_description" id="troupe_description" class="form-control py-3" style="color: black; font-size: 18px;" id="exampleTextarea" rows="3"></textarea>
                             </div>
                         </div>
+
+                        <div class="row mb-3">
+                            <label class="h4" for="troupes_advsr">Choreographer/Adviser</label>
+                            <div class="">
+                                <input type="text" name="troupes_advsr" id="troupes_advsr" class="form-control py-3" style="color: black; font-size: 18px;" />
+                            </div>
+                        </div>
                     
                         <div class="row">
                             <div class="col-sm-10">

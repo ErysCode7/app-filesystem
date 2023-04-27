@@ -66,23 +66,23 @@
                 <form action="../includes/controller/update-members-permanent-records.php" method="post">
                     <input type="hidden" name="id" value="<?= $id ?>">    
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label" for="student_number">Studen Number</label>
+                        <label class="col-sm-2 col-form-label" for="student_number">Student Number</label>
                         <div class="col-sm-10">
-                            <input type="text" name="student_number" id="student_number" value="<?= $student_number ?>" class="form-control" style="color: black"   />
+                            <input type="text" name="student_number" maxlength="12" id="student_number" value="<?= $student_number ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="first_name">First name</label>
                         <div class="col-sm-10">
-                            <input type="text" name="first_name" id="first_name" value="<?= $first_name ?>" class="form-control" style="color: black"   />
+                            <input type="text" name="first_name" maxlength="20" id="first_name" value="<?= $first_name ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="last_name">Last name</label>
                         <div class="col-sm-10">
-                            <input type="text" name="last_name" id="last_name" value="<?= $last_name ?>" class="form-control" style="color: black"   />
+                            <input type="text" name="last_name" maxlength="30" id="last_name" value="<?= $last_name ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
@@ -96,14 +96,14 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="contact_number">Contact Number</label>
                         <div class="col-sm-10">
-                            <input type="text" name="contact_number" id="contact_number" value="<?= $contact_number ?>" class="form-control" style="color: black"   />
+                            <input type="text" name="contact_number" maxlength="12" id="contact_number" value="<?= $contact_number ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="address">Address</label>
                         <div class="col-sm-10">
-                            <input type="text" name="address" id="address" value="<?= $address ?>" class="form-control" style="color: black"   />
+                            <input type="text" name="address" maxlength="50" id="address" value="<?= $address ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
@@ -124,21 +124,21 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="course">Course</label>
                         <div class="col-sm-10">
-                            <input type="text" name="course" id="course" value="<?= $course ?>" class="form-control" style="color: black"   />
+                            <input type="text" name="course" maxlength="30" id="course" value="<?= $course ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="curriculum_year">Curriculum year</label>
                         <div class="col-sm-10">
-                            <input type="text" name="curriculum_year" id="curriculum_year" value="<?= $curriculum_year ?>" class="form-control" style="color: black"   />
+                            <input type="text" name="curriculum_year" maxlength="20" id="curriculum_year" value="<?= $curriculum_year ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="date_of_membership">Date of Membership</label>
                         <div class="col-sm-10">
-                            <input type="text" name="date_of_membership" id="date_of_membership" value="<?= $date_of_membership ?>" class="form-control" style="color: black"   />
+                            <input type="text" name="date_of_membership" maxlength="20" id="date_of_membership" value="<?= $date_of_membership ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
@@ -159,21 +159,21 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="fathers_name">Fathers Name</label>
                         <div class="col-sm-10">
-                            <input type="text" name="fathers_name" id="fathers_name" value="<?= $fathers_name ?>" class="form-control" style="color: black"   />
+                            <input type="text" name="fathers_name" maxlength="50" id="fathers_name" value="<?= $fathers_name ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="fathers_occupation">Fathers Occupation</label>
                         <div class="col-sm-10">
-                            <input type="text" name="fathers_occupation" id="fathers_occupation" value="<?= $fathers_occupation ?>" class="form-control" style="color: black"   />
+                            <input type="text" name="fathers_occupation" maxlength="50" id="fathers_occupation" value="<?= $fathers_occupation ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="fathers_phone_number">Fathers Phone Number</label>
                         <div class="col-sm-10">
-                            <input type="text" name="fathers_phone_number" id="fathers_phone_number" value="<?= $fathers_phone_number ?>" class="form-control" style="color: black"   />
+                            <input type="text" name="fathers_phone_number" maxlength="11" id="fathers_phone_number" value="<?= $fathers_phone_number ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
@@ -181,21 +181,21 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="mothers_name">Mothers Name</label>
                         <div class="col-sm-10">
-                            <input type="text" name="mothers_name" id="mothers_name" value="<?= $mothers_name ?>" class="form-control" style="color: black"   />
+                            <input type="text" name="mothers_name" maxlength="50" id="mothers_name" value="<?= $mothers_name ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="mothers_occupation">Mothers Occupation</label>
                         <div class="col-sm-10">
-                            <input type="text" name="mothers_occupation" id="mothers_occupation" value="<?= $mothers_occupation ?>" class="form-control" style="color: black"   />
+                            <input type="text" name="mothers_occupation" maxlength="50" id="mothers_occupation" value="<?= $mothers_occupation ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="mothers_phone_number">Mothers Phone Number</label>
                         <div class="col-sm-10">
-                            <input type="text" name="mothers_phone_number" id="mothers_phone_number" value="<?= $mothers_phone_number ?>" class="form-control" style="color: black"   />
+                            <input type="text" name="mothers_phone_number" maxlength="11" id="mothers_phone_number" value="<?= $mothers_phone_number ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
                 

@@ -180,7 +180,7 @@
                       <tr>
                         <td><a href="./view-profile.php?student_number=<?= $row["student_number"]; ?>">View Details</td>
                         <td><?php echo $row["student_number"]; ?></td>
-                        <td><?php echo $row["troupe"]; ?></td>
+                        <td><a href="./view-troupes.php?id=<?=$row["troup_id"]; ?>"><?php echo $row["troupe"]; ?></a></td>
                         <td>
                         <?php echo $row["first_name"]; ?>
                         <?php echo $row["last_name"]; ?>

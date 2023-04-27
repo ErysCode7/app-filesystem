@@ -172,7 +172,7 @@
                         <div class="row mb-3">
                             <label class="h4" for="event">Venue</label>
                             <div class="">
-                                <input type="text" name="event" id="event" class="form-control py-3" style="color: black; font-size: 18px;" />
+                                <input type="text" name="event" maxlength="100" id="event" class="form-control py-3" style="color: black; font-size: 18px;" />
                             </div>
                         </div>
 
@@ -193,14 +193,14 @@
                         <div class="row mb-3 flex-grow-1">
                             <label class="h4" for="event_title">Event Title</label>
                             <div>
-                                <input type="text" name="event_title" id="event_title" class="form-control py-3" style="color: black; font-size: 18px;"required />
+                                <input type="text" name="event_title" maxlength="70" id="event_title" class="form-control py-3" style="color: black; font-size: 18px;"required />
                             </div>
                         </div>
 
                         <div class="row mb-3 flex-grow-1">
                             <label class="h4" for="description">Description</label>
                             <div>
-                                <textarea cols="5" rows="3" name="description" id="description" class="form-control" style="color: black; font-size: 18px;"></textarea>
+                                <textarea cols="5" rows="3" name="description" maxlength="200" id="description" class="form-control" style="color: black; font-size: 18px;"></textarea>
                         
                             </div>
                         </div>

@@ -64,7 +64,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="event">Event</label>
                         <div class="col-sm-10">
-                            <input type="text" name="event" id="event" value="<?=$event?>" class="form-control" style="color: black"   />
+                            <input type="text" name="event" maxlength="50" id="event" value="<?=$event?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
@@ -85,14 +85,14 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="event_title">Event Title</label>
                         <div class="col-sm-10">
-                            <input type="text" name="event_title" id="event_title" value="<?=$event_title?>" class="form-control" style="color: black"   />
+                            <input type="text" name="event_title" maxlength="50" id="event_title" value="<?=$event_title?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="description">Description</label>
                         <div class="col-sm-10">
-                            <input type="text" name="description" id="description" value="<?=$description?>" class="form-control" style="color: black"   />
+                            <input type="text" name="description" maxlength="200" id="description" value="<?=$description?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
                 

@@ -41,21 +41,21 @@ session_start();
                         <?php if(isset($_GET["username"])) { $username = $_GET["username"];?>
                             <div class="form-group mb-3">
                                 <label for="username">Username</label>
-                                <input type="text" name="username" id="username" placeholder="Username" value="<?= $username ?>">
+                                <input type="text" name="username" maxlength="20" id="username" placeholder="Username" value="<?= $username ?>">
                             </div>
                         <?php } else { ?>
                             <div class="form-group mb-3">
                                 <label for="username">Username</label>
-                                <input type="text" name="username" id="username" placeholder="Username">
+                                <input type="text" name="username" maxlength="20" id="username" placeholder="Username">
                             </div>
                         <?php } ?>
                             <div class="form-group mb-3">
                                 <label for="password">Password</label>
-                                <input type="password" name="password" id="password" placeholder="Password">
+                                <input type="password" name="password" maxlength="50" id="password" placeholder="Password">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="confirm_password">Confirm Password</label>
-                                <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password">
+                                <input type="password" name="confirm_password" maxlength="50" id="confirm_password" placeholder="Confirm Password">
                             </div>
                             <div class="form-group">
                                 <button type="submit" name="submit" class="btn btn-primary">Sign up</button>
