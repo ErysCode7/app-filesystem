@@ -1,22 +1,11 @@
 <?php
-   require "../includes/authentication/authentication.php";
+  require "../includes/authentication/authentication.php";
 ?>
-
-<?php require "../includes/view/header.php"; ?>
-
 
 <?php
-
-if(isset($_GET["student_number"])) {
-   require "../includes/model/connection.php";
-   $student_number = $_GET["student_number"];
-   $sql = "SELECT * FROM members_permanent_records WHERE student_number = '$student_number';";
-   $result = $con->query($sql);
-
-   $row = $result->fetch_assoc();
-}
-
+ require "../includes/view/header.php";
 ?>
+  
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
@@ -138,7 +127,9 @@ if(isset($_GET["student_number"])) {
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
-<section >
+
+            
+<section style="background-color: #eee;">
   <div class="container py-5">
     <div class="row">
       <div class="col">
@@ -380,7 +371,22 @@ if(isset($_GET["student_number"])) {
     </div>
   </div>
 </section>
-                
-            
-
+</div>          
+          <!--/ Hoverable Table rows -->
+          
 <?php include "../includes/view/footer.php" ?>
+
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- DataTables CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.css"/>
+<!-- DataTables JS -->
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.js"></script>
+
+<script language="javascript">
+$(document).ready( function () {
+    $('#myTable').DataTable( {
+        "ordering": false
+    } );
+} );
+</script>

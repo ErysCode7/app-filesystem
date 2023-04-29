@@ -149,10 +149,11 @@
               <div class="card">
                 
               <h5 class="card-header">Troupe Members</h5>
-                <div class="table-responsive">
-                  <table class="table table-hover">
+                <br/>
+                <div class="table-responsive px-4">
+                  <table class="table table-sm table-bordered table-striped table-hover p-4" id="myTable">
                     <thead>
-                      <tr>
+                      <tr class="table-primary">
                         <th>Details</th>
                         <th>Student Number</th>
                         <th>Full Name</th>
@@ -165,9 +166,10 @@
                       require "../includes/model/connection.php";
                       $sql = "SELECT * FROM members_permanent_records where troup_id= '$id' order by id desc";
                       $result = $con->query($sql);
+                      if ($result->num_rows > 0) {
                     ?>
-                    <?php while($row = $result->fetch_assoc()) { ?>
                     <tbody class="table-border-bottom-0">
+                    <?php while($row = $result->fetch_assoc()) { ?>
                       <tr>
                         <td><a href="./view-profile.php?student_number=<?= $row["student_number"]; ?>">View Details</td>
                         <td>
@@ -225,9 +227,11 @@
                           </form> 
                         </td>
                       </tr>
+                      <?php } ?>     
                     </tbody>
                     <?php } ?>     
                   </table>
+                  <br/>
                 </div>
                 
               
@@ -271,3 +275,18 @@
           <!--/ Hoverable Table rows -->
           
 <?php include "../includes/view/footer.php" ?>
+
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- DataTables CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.css"/>
+<!-- DataTables JS -->
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.11.3/datatables.min.js"></script>
+
+<script language="javascript">
+$(document).ready( function () {
+    $('#myTable').DataTable( {
+        "ordering": false
+    } );
+} );
+</script>
