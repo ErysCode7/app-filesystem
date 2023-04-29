@@ -206,7 +206,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="description">Description</label>
                         <div class="col-sm-10">
-                            <input type="text" name="description" maxlength="500" id="description" value="<?=$description?>" class="form-control" style="color: black"   />
+                            <input type="text" name="description" id="description" value="<?=$description?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
                 

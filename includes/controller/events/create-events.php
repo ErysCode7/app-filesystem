@@ -12,8 +12,8 @@ if(isset($_POST["submit"])) {
 
     $troup_id = 0;
 
-    if(strlen($description) > 80) {
-        $_SESSION["status"] = "Description must be 80 letters only";
+    if(strlen($description) > 500) {
+        $_SESSION["status"] = "Description must be 500 characters only";
         header("Location: ../../../pages/add-event.php");
         exit();
     } else {

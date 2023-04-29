@@ -169,7 +169,7 @@
                       <tr class="table-primary">
                         <th>Details</th>
                         <th>Troupes</th>
-                        <th>Actions</th>
+                        <th class="justify-content-end" style="text-align: right;">Actions</th>
                       </tr>
                     </thead>
                     <?php 
@@ -186,7 +186,7 @@
                             <?php echo $row["name"]; ?>
                         </td>
 
-                        <td class="d-flex align-items-center gap-2">
+                        <td class="d-flex align-items-center justify-content-end gap-2">
                           <!-- UPDATE -->
                           <form action="update-troupes.php" method="post">
                             <!-- UPDATING FIELDS PASSING IT TO ANOTHER FORM -->   

@@ -171,7 +171,6 @@
                         <th>Schedule</th>
                         <th>Venue</th>
                         <!-- <th>Event Information</th> -->
-                        <th>Description</th>
                         <th>Actions</th>
                       </tr>
                     </thead>
@@ -189,10 +188,8 @@
                         <td>
                             <?php echo $row["event"]; ?>
                         </td>
-                        <td style="width: 500px; margin: 0 auto;">
-                            <?php echo $row["description"]; ?>
-                        </td>
-                        <td class="d-flex align-items-center gap-2">
+                
+                        <td class="d-flex align-items-center  gap-2">
                           <!-- UPDATE -->
                           <form action="update-event.php" method="post">
                             <!-- UPDATING FIELDS PASSING IT TO ANOTHER FORM -->   

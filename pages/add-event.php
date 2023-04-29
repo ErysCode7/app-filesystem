@@ -200,7 +200,7 @@
                         <div class="row mb-3 flex-grow-1">
                             <label class="h4" for="description">Description</label>
                             <div>
-                                <textarea cols="5" rows="3" name="description" maxlength="200" id="description" class="form-control" style="color: black; font-size: 18px;"></textarea>
+                                <textarea cols="5" rows="3" name="description" id="description" class="form-control" style="color: black; font-size: 18px;"></textarea>
                         
                             </div>
                         </div>

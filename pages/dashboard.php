@@ -3,6 +3,27 @@
 ?>
 <?php require "../includes/view/header.php"; ?>
 
+<?php
+    require "../includes/model/connection.php";
+
+    $sqlAdmin = "SELECT * FROM administrator";
+    $resultAdmin = $con->query($sqlAdmin);
+
+    $sqlEvents = "SELECT * FROM events";
+    $resultEvents = $con->query($sqlEvents);
+
+    $sqlMembers = "SELECT * FROM members_permanent_records";
+    $resultMembers = $con->query($sqlMembers);
+
+    $sqlTroupes = "SELECT * FROM troupes";
+    $resultTroupes = $con->query($sqlTroupes);
+
+    $adminCount = $resultAdmin->num_rows;
+    $eventsCount = $resultEvents->num_rows;
+    $membersCount = $resultMembers->num_rows;
+    $troupesCount = $resultTroupes->num_rows;
+?>
+
   <body>
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
@@ -31,12 +52,11 @@
               <!-- Search -->
               <div class="navbar-nav align-items-center">
                 <div class="nav-item d-flex align-items-center">
-                  <i class="bx bx-search fs-4 lh-0"></i>
+             
                   <input
                     type="text"
                     class="form-control border-0 shadow-none"
-                    placeholder="Search..."
-                    aria-label="Search..."
+            
                   />
                 </div>
               </div>
@@ -92,20 +112,18 @@
           <div class="content-wrapper">
             <!-- Content -->
 
-            <div class="container-xxl flex-grow-1 container-p-y">
+            <div class="container-xxl flex-grow-1 container-p-y" style="width: 100%;" >
               <div class="row">
-                <div class="col-lg-8 mb-4 order-0">
+                <div class="mb-4 order-0">
                   <div class="card">
+                  <img src="../assets/img/dul_logo.png" style="width: 100%; border-radius: 10px;" alt="" />
                     <div class="d-flex align-items-end row">
                       <div class="col-sm-7">
                         <div class="card-body">
-                          <h5 class="card-title text-primary">Congratulations John! 🎉</h5>
+                          <h5 class="card-title text-primary">Manage Events 🎉</h5>
                           <p class="mb-4">
-                            You have done <span class="fw-bold">72%</span> more sales today. Check your new badge in
-                            your profile.
+                            Manage your  <span class="fw-bold">Events, Members, Troupes</span> today. 
                           </p>
-
-                          <a href="javascript:;" class="btn btn-sm btn-outline-primary">View Badges</a>
                         </div>
                       </div>
                       <div class="col-sm-5 text-center text-sm-left">
@@ -122,80 +140,45 @@
                     </div>
                   </div>
                 </div>
+
                 <div class="col-lg-4 col-md-4 order-1">
-                  <div class="row">
-                    <div class="col-lg-6 col-md-12 col-6 mb-4">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="card-title d-flex align-items-start justify-content-between">
-                            <div class="avatar flex-shrink-0">
-                              <img
-                                src="../assets/img/icons/unicons/chart-success.png"
-                                alt="chart success"
-                                class="rounded"
-                              />
-                            </div>
-                            <div class="dropdown">
-                              <button
-                                class="btn p-0"
-                                type="button"
-                                id="cardOpt3"
-                                data-bs-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                              >
-                                <i class="bx bx-dots-vertical-rounded"></i>
-                              </button>
-                              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt3">
-                                <a class="dropdown-item" href="javascript:void(0);">View More</a>
-                                <a class="dropdown-item" href="javascript:void(0);">Delete</a>
-                              </div>
-                            </div>
-                          </div>
-                          <span class="fw-semibold d-block mb-1">Admin</span>
-                          <h3 class="card-title mb-2">$12,628</h3>
-                          <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +72.80%</small>
+                  <div class="d-flex gap-3">
+                    <div class="mb-4">
+                      <div class="card" style="height: 200px; width: 290px; display: flex; align-items: center;">
+                        <div class="card-body justify-content-center" style="height: 100%; text-align: center; display: flex; flex-direction: column;">
+                          <span class="d-block mb-1 font-size: 20px;">Admin Count</span>
+                          <h3 class="card-title mb-2" style="font-weight: bold; font-size: 70px;"><?= $adminCount ?></h3>        
                         </div>
                       </div>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-6 mb-4">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="card-title d-flex align-items-start justify-content-between">
-                            <div class="avatar flex-shrink-0">
-                              <img
-                                src="../assets/img/icons/unicons/wallet-info.png"
-                                alt="Credit Card"
-                                class="rounded"
-                              />
-                            </div>
-                            <div class="dropdown">
-                              <button
-                                class="btn p-0"
-                                type="button"
-                                id="cardOpt6"
-                                data-bs-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                              >
-                                <i class="bx bx-dots-vertical-rounded"></i>
-                              </button>
-                              <div class="dropdown-menu dropdown-menu-end" aria-labelledby="cardOpt6">
-                                <a class="dropdown-item" href="javascript:void(0);">View More</a>
-                                <a class="dropdown-item" href="javascript:void(0);">Delete</a>
-                              </div>
-                            </div>
-                          </div>
-                          <span>Sales</span>
-                          <h3 class="card-title text-nowrap mb-1">$4,679</h3>
-                          <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.42%</small>
+                    <a href="./members-permanent-records.php" class="mb-4">
+                      <div class="card" style="height: 200px; width: 290px; display: flex; align-items: center;">
+                        <div class="card-body justify-content-center" style="height: 100%; text-align: center; display: flex; flex-direction: column;">
+                          <span class="d-block mb-1 font-size: 20px;">Members Count</span>
+                          <h3 class="card-title mb-2" style="font-weight: bold; font-size: 70px;"><?= $membersCount ?></h3>        
                         </div>
                       </div>
-                    </div>
+                    </a>
+                    <a href="./events.php" class="mb-4">
+                      <div class="card" style="height: 200px; width: 290px; display: flex; align-items: center;">
+                        <div class="card-body justify-content-center" style="height: 100%; text-align: center; display: flex; flex-direction: column;">
+                          <span class="d-block mb-1 font-size: 20px;">Events Count</span>
+                          <h3 class="card-title mb-2" style="font-weight: bold; font-size: 70px;"><?= $eventsCount ?></h3>        
+                        </div>
+                      </div>
+                    </a>
+                    <a href="./troupes.php" class="mb-4">
+                      <div class="card" style="height: 200px; width: 290px; display: flex; align-items: center;">
+                        <div class="card-body justify-content-center" style="height: 100%; text-align: center; display: flex; flex-direction: column;">
+                          <span class="d-block mb-1 font-size: 20px;">Troupes Count</span>
+                          <h3 class="card-title mb-2" style="font-weight: bold; font-size: 70px;"><?= $troupesCount ?></h3>        
+                        </div>
+                      </div>
+                    </a>
                   </div>
                 </div>
                 <!-- Total Revenue -->
-                <div class="col-12 col-lg-8 order-2 order-md-3 order-lg-2 mb-4">
+                <!-- <div class="col-12 col-lg-8 order-2 order-md-3 order-lg-2 mb-4">
                   <div class="card">
                     <div class="row row-bordered g-0">
                       <div class="col-md-8">
@@ -250,9 +233,9 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!--/ Total Revenue -->
-                <div class="col-12 col-md-8 col-lg-4 order-3 order-md-2">
+                <!-- <div class="col-12 col-md-8 col-lg-4 order-3 order-md-2">
                   <div class="row">
                     <div class="col-6 mb-4">
                       <div class="card">
@@ -337,11 +320,11 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
-              <div class="row">
+              <!-- <div class="row"> -->
                 <!-- Order Statistics -->
-                <div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
+                <!-- <div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
                   <div class="card h-100">
                     <div class="card-header d-flex align-items-center justify-content-between pb-0">
                       <div class="card-title mb-0">
@@ -438,11 +421,11 @@
                       </ul>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!--/ Order Statistics -->
 
                 <!-- Expense Overview -->
-                <div class="col-md-6 col-lg-4 order-1 mb-4">
+                <!-- <div class="col-md-6 col-lg-4 order-1 mb-4">
                   <div class="card h-100">
                     <div class="card-header">
                       <ul class="nav nav-pills" role="tablist">
@@ -499,11 +482,11 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!--/ Expense Overview -->
 
                 <!-- Transactions -->
-                <div class="col-md-6 col-lg-4 order-2 mb-4">
+                <!-- <div class="col-md-6 col-lg-4 order-2 mb-4">
                   <div class="card h-100">
                     <div class="card-header d-flex align-items-center justify-content-between">
                       <h5 class="card-title m-0 me-2">Transactions</h5>
@@ -620,7 +603,7 @@
                       </ul>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!--/ Transactions -->
               </div>
             </div>

@@ -158,12 +158,12 @@ if(isset($_GET["id"])) {
                   <button class="btn btn-primary">View Events</button></a> 
                 </div>
                 <div class="card-header"></div>
-                <div class="col-md-6">
+                <div class="col-md-6" style="margin-left: 30px;">
                     <div class="group-body h-auto overflow-auto">
                         <h3 class="group-title">Rizal Technological University Teatro Rizalia Kultura Dance Troupe</h3>
                         <h4 class="group-categories font-italic">Dance-University-based</h4>
                         <p>The Rizal Technological University known as the Teatro Rizalia Kultura Dance Troupe (RTU Dance Troupe) is the official dance troupe of the university recognized for its research-based performances and productions. It is a group whose primary concern is to actualized and spread the rich culture and dances of the different tribes of the country. Student members undergo rigid training on various kinds of dances. They are prepared to cater all the dance needs of viewers in various occasions and situations. The RTU Teatro Rizalia Kultura Dance Troupe is composed of bonafide students of Rizal Technological University who are academically upright and with passion in the arts.</p>
-                        <p>ALLAN CARLO A. PIOL - Cultural Staff/Adviser/Choreographer of the Troupe</p>
+                        <p> <?php echo $row["adviser"]; ?> - Cultural Staff/Adviser/Choreographer of the Troupe</p>
                     </div>
                 </div>
             </div>
