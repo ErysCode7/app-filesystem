@@ -156,7 +156,7 @@
                         <div class="row mb-3">
                             <label class="h4" for="student_number">Student Number</label>
                             <div class="">
-                                <input type="text" name="student_number" maxlength="12" id="student_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter student number" required  />
+                                <input type="text" oninput="this.value = this.value.replace(/[^-0-9]|(?<=.)-/g, '')" name="student_number" maxlength="11" id="student_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter student number" required  />
                             </div>
                         </div>
                         
@@ -197,7 +197,7 @@
                             <div class="row mb-3  flex-grow-1">
                                 <label class="h4" for="contact_number">Contact Number</label>
                                 <div>
-                                    <input type="text" name="contact_number" maxlength="11" id="contact_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter contact number"  />
+                                    <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="contact_number" maxlength="11" id="contact_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter contact number"  />
                                 </div>
                             </div>
 
@@ -246,7 +246,7 @@
                             <div class="row mb-3 flex-grow-1">
                                 <label class="h4" for="curriculum_year">Curriculum year</label>
                                 <div>
-                                    <input type="text" name="curriculum_year" maxlength="15" id="curriculum_year" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter curriculum year" />
+                                    <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="curriculum_year" maxlength="15" id="curriculum_year" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter curriculum year" />
                                 </div>
                             </div>
 
@@ -294,7 +294,7 @@
                             <div class="row mb-3 flex-grow-1">
                                 <label class="h4" for="fathers_phone_number">Fathers Phone Number</label>
                                 <div>
-                                    <input type="text" name="fathers_phone_number" maxlength="12" id="fathers_phone_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter fathers phone number" />
+                                    <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="fathers_phone_number" maxlength="12" id="fathers_phone_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter fathers phone number" />
                                 </div>
                             </div>
                             
@@ -320,7 +320,7 @@
                             <div class="row mb-3 flex-grow-1">
                                 <label class="h4" for="mothers_phone_number">Mothers Phone Number</label>
                                 <div>
-                                    <input type="text" name="mothers_phone_number" maxlength="12" id="mothers_phone_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter mothers phone number"   />
+                                    <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="mothers_phone_number" maxlength="12" id="mothers_phone_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter mothers phone number"   />
                                 </div>
                             </div>
 
@@ -345,4 +345,5 @@
           <!--/ Hoverable Table rows -->
           
 <?php include "../includes/view/footer.php" ?>
+
 

@@ -12,22 +12,24 @@ if(isset($_POST["submit"])) {
 
     $troup_id = 0;
 
-    if(strlen($description) > 500) {
+    if(empty($event) || empty($schedule) || empty($event_title) || empty($time)) {
+        $_SESSION["status"] = "Fill in empty fields";
+        header("Location: ../../../pages/add-event.php");
+        exit();
+    } else if(strlen($description) > 500) {
         $_SESSION["status"] = "Description must be 500 characters only";
         header("Location: ../../../pages/add-event.php");
         exit();
     } else {
-        if($troupe === 'Dulaang Rizalia') {
-            $troup_id = 1;
-        } else if($troupe === 'Sining Biswal') {
-            $troup_id = 2;
-        } else if($troupe === 'Tunog Rizalia Rondalla') {
-            $troup_id = 3;
-        } else if($troupe === 'Himig Rizalia') {
-            $troup_id = 4;
-        } else if($troupe === 'Kultura Rizalia') {
-            $troup_id = 5;
+        $sql =  "SELECT * FROM troupes WHERE name = '$troupe';";
+        $result = $con->query($sql);
+        $row = $result->fetch_assoc();      
+
+        if($troupe === $row['name']) {
+            $troup_id =  $row['id'];
         }
+        
+        // print_r($row['id'].$row['name']); die();
 
         $sql = "INSERT INTO events (troup_id, event, event_title, description, time, schedule, troupe) VALUES(?, ?, ?, ?, ?, ?, ?)";
         $stmt = mysqli_stmt_init($con);

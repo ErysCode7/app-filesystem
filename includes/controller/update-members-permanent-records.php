@@ -5,7 +5,7 @@ session_start();
 if(isset($_POST["submit"])) {
     require "../model/connection.php";
     $id = $_POST["id"];
-    $troup_id = $_POST["troup_id"];
+    $troup_id = 0;
     $student_number = $_POST["student_number"];
     $first_name = $_POST["first_name"];
     $last_name = $_POST["last_name"];
@@ -26,21 +26,18 @@ if(isset($_POST["submit"])) {
     $mothers_occupation = $_POST["mothers_occupation"];
     $mothers_phone_number = $_POST["mothers_phone_number"];
 
-    if($troupe === 'Dulaang Rizalia') {
-        $troup_id = 1;
-    } else if($troupe === 'Sining Biswal') {
-        $troup_id = 2;
-    } else if($troupe === 'Tunog Rizalia Rondalla') {
-        $troup_id = 3;
-    } else if($troupe === 'Himig Rizalia') {
-        $troup_id = 4;
-    } else if($troupe === 'Kultura Rizalia') {
-        $troup_id = 5;
+    $sql =  "SELECT * FROM members_permanent_records WHERE troupe = '$troupe';";
+    $result = $con->query($sql);
+    $row = $result->fetch_assoc();  
+
+    if($troupe === $row['troupe']) {
+        $troup_id =  $id;
     }
     
     $sql = "UPDATE members_permanent_records SET troup_id = ?, student_number = ?, first_name = ?, last_name = ?, birthday = ?, contact_number = ?, troupe = ?, course = ?, curriculum_year = ?, date_of_membership = ?, address = ?, active_status = ?, fathers_name = ?, fathers_occupation = ?, fathers_phone_number = ?, mothers_name = ?, mothers_occupation = ?, mothers_phone_number = ?  WHERE id = '$id';";
 
     $stmt = mysqli_stmt_init($con);
+
     if(!mysqli_stmt_prepare($stmt, $sql)) {
         $_SESSION["status"] = "Something went wrong";
         header("Location: ../../pages/update-members-records.php?query=failed");

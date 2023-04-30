@@ -4,6 +4,13 @@ session_start();
 if(isset($_POST["submit"])) {
     require "../../model/connection.php";
     $troupes_name = $_POST["troupes_name"];
+    $troupes_title = $_POST["troupes_title"];
+    $troupe_description = $_POST["troupe_description"];
+    $troupes_adviser = $_POST["troupes_adviser"];
+
+    if(empty($troupes_name) || empty( $troupes_title)) {
+        
+    }
 
     $sql = "INSERT INTO troupes (name) VALUES(?)";
     $stmt = mysqli_stmt_init($con);

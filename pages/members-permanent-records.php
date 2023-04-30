@@ -204,7 +204,7 @@
                           <form action="./update-members-records.php" method="post">
                             <!-- UPDATING FIELDS PASSING IT TO ANOTHER FORM -->   
                             <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
-                            <input type="hidden" name="id" value="<?php echo $row["troup_id"]; ?>">
+                            <input type="hidden" name="troup_id" value="<?php echo $row["troup_id"]; ?>">
                             <input type="hidden" name="student_number" value="<?php echo $row["student_number"]; ?>">
                             <input type="hidden" name="first_name" value="<?php echo $row["first_name"]; ?>">
                             <input type="hidden" name="last_name" value="<?php echo $row["last_name"]; ?>">
@@ -290,7 +290,7 @@
 <script language="javascript">
 $(document).ready( function () {
     $('#myTable').DataTable( {
-        "ordering": false
+        // "ordering": false
     } );
 } );
 </script>

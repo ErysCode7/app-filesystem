@@ -267,7 +267,7 @@
 <script language="javascript">
 $(document).ready( function () {
     $('#myTable').DataTable( {
-        "ordering": false
+        // "ordering": false
     } );
 } );
 </script>

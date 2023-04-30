@@ -162,9 +162,9 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label class="h4" for="troupes_heading">Title</label>
+                            <label class="h4" for="troupes_title">Title</label>
                             <div class="">
-                                <input type="text" name="troupes_heading" id="troupes_heading" class="form-control py-3" style="color: black; font-size: 18px;" />
+                                <input type="text" name="troupes_title" id="troupes_title" class="form-control py-3" style="color: black; font-size: 18px;" />
                             </div>
                         </div>
 
@@ -176,9 +176,9 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label class="h4" for="troupes_advsr">Choreographer/Adviser</label>
+                            <label class="h4" for="troupes_adviser">Choreographer/Adviser</label>
                             <div class="">
-                                <input type="text" name="troupes_advsr" id="troupes_advsr" class="form-control py-3" style="color: black; font-size: 18px;" />
+                                <input type="text" name="troupes_adviser" id="troupes_adviser" class="form-control py-3" style="color: black; font-size: 18px;" />
                             </div>
                         </div>
                     

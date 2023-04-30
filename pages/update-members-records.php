@@ -190,7 +190,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="student_number">Student Number</label>
                         <div class="col-sm-10">
-                            <input type="text" name="student_number" maxlength="12" id="student_number" value="<?= $student_number ?>" class="form-control" style="color: black"   />
+                            <input type="text" oninput="this.value = this.value.replace(/[^-0-9]|(?<=.)-/g, '')"  name="student_number" maxlength="12" id="student_number" value="<?= $student_number ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
@@ -218,7 +218,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="contact_number">Contact Number</label>
                         <div class="col-sm-10">
-                            <input type="text" name="contact_number" maxlength="12" id="contact_number" value="<?= $contact_number ?>" class="form-control" style="color: black"   />
+                            <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="contact_number" maxlength="11" id="contact_number" value="<?= $contact_number ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
@@ -260,7 +260,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="curriculum_year">Curriculum year</label>
                         <div class="col-sm-10">
-                            <input type="text" name="curriculum_year" maxlength="20" id="curriculum_year" value="<?= $curriculum_year ?>" class="form-control" style="color: black"   />
+                            <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="curriculum_year" maxlength="20" id="curriculum_year" value="<?= $curriculum_year ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
@@ -302,7 +302,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="fathers_phone_number">Fathers Phone Number</label>
                         <div class="col-sm-10">
-                            <input type="text" name="fathers_phone_number" maxlength="11" id="fathers_phone_number" value="<?= $fathers_phone_number ?>" class="form-control" style="color: black"   />
+                            <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="fathers_phone_number" maxlength="11" id="fathers_phone_number" value="<?= $fathers_phone_number ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
 
@@ -324,7 +324,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="mothers_phone_number">Mothers Phone Number</label>
                         <div class="col-sm-10">
-                            <input type="text" name="mothers_phone_number" maxlength="11" id="mothers_phone_number" value="<?= $mothers_phone_number ?>" class="form-control" style="color: black"   />
+                            <input type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="mothers_phone_number" maxlength="11" id="mothers_phone_number" value="<?= $mothers_phone_number ?>" class="form-control" style="color: black"   />
                         </div>
                     </div>
                 

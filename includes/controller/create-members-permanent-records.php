@@ -39,17 +39,15 @@ if(isset($_POST["submit"])) {
         exit();
     } else {
 
-        if($troupe === 'Dulaang Rizalia') {
-            $troup_id = 1;
-        } else if($troupe === 'Sining Biswal') {
-            $troup_id = 2;
-        } else if($troupe === 'Tunog Rizalia Rondalla') {
-            $troup_id = 3;
-        } else if($troupe === 'Himig Rizalia') {
-            $troup_id = 4;
-        } else if($troupe === 'Kultura Rizalia') {
-            $troup_id = 5;
+        $sql =  "SELECT * FROM troupes WHERE name = '$troupe';";
+        $result = $con->query($sql);
+        $row = $result->fetch_assoc();      
+
+        if($troupe === $row['name']) {
+            $troup_id =  $row['id'];
         }
+        
+        // print_r($row['id'].$row['name']); die();
 
         $sql = "INSERT INTO members_permanent_records (troup_id, student_number, first_name, last_name, troupe, contact_number, course, curriculum_year, birthday, date_of_membership, address, active_status, fathers_name, fathers_occupation, fathers_phone_number, mothers_name, mothers_occupation, mothers_phone_number) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
 
