@@ -232,13 +232,20 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="troupe">Troupe</label>
                         <div class="col-sm-10">
+                        <?php 
+                            require "../includes/model/connection.php";
+                            $sqlTroupe = "SELECT name FROM troupes";
+                            $resultTroupe = $con->query($sqlTroupe);
+                            $data = array();
+                            while ($row = $resultTroupe->fetch_assoc()) {
+                                $data[] = $row;
+                            }
+                        ?> 
                             <select name="troupe" id="troupe" class="form-control" style="color: black" required>
                                 <option value="">Select troupe</option>
-                                <option value="Dulaang Rizalia">Dulaang Rizalia</option>
-                                <option value="Sining Biswal">Sining Biswal</option>
-                                <option value="Tunog Rizalia Rondalla">Tunog Rizalia Rondalla</option>
-                                <option value="Himig Rizalia">Himig Rizalia</option>
-                                <option value="Kultura Rizalia">Kultura Rizalia</option>
+                                <?php foreach ($data as $row) {
+                                    echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
+                                } ?>
                             </select>
                         </div>
                     </div>
