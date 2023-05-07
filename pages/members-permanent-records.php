@@ -226,7 +226,7 @@
                             <button class="btn btn-primary" type="submit"  name="submit"><i class="bx bx-edit-alt me-1"></i> Edit</button>
                           </form>
                           <!-- DELETE -->
-                          <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" >
+                          <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" hidden>
                             <!-- Button trigger delete modal -->
                             <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" data-id="<?php echo $row["student_number"]; ?>" onclick="confirmDelete(this);" ><i class="bx bx-trash me-1" ></i> Delete</butto>
                             <input type="hidden" name="student_number" value="<?php echo $row["student_number"]; ?>">

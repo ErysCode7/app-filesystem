@@ -154,7 +154,7 @@
                     <form action="../includes/controller/create-members-permanent-records.php" method="post">
 
                         <div class="row mb-3">
-                            <label class="h4" for="student_number">Student Number</label>
+                            <label class="h4" for="student_number">Student Number<span style="color: red;">*</span></label>
                             <div class="">
                                 <input type="text" oninput="this.value = this.value.replace(/[^-0-9]|(?<=.)-/g, '')" name="student_number" maxlength="11" id="student_number" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter student number" required  />
                             </div>
@@ -163,14 +163,14 @@
                         <div class="d-flex justify-content-between align-items-center gap-3 w-full">   
 
                             <div class="row mb-3 flex-grow-1">
-                                <label class="h4" for="first_name">First name</label>
+                                <label class="h4" for="first_name">First name<span style="color: red;">*</span></label>
                                 <div>
                                     <input type="text" name="first_name" maxlength="20" id="first_name" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter First Name" required   />
                                 </div>
                             </div>
 
                             <div class="row mb-3 flex-grow-1">
-                                <label class="h4" for="last_name">Last name</label>
+                                <label class="h4" for="last_name">Last name<span style="color: red;">*</span></label>
                                 <div>
                                     <input type="text" name="last_name" maxlength="30" id="last_name" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter Last Name" required  />
                                 </div>
@@ -213,7 +213,7 @@
                         <div class="d-flex justify-content-between align-items-center gap-3 w-full flex-wrap">
 
                             <div class="row mb-3 flex-grow-1">
-                                <label class="h4" for="troupe">Troupe</label>
+                                <label class="h4" for="troupe">Troupe<span style="color: red;">*</span></label>
                                 <!-- <div>
                                     <input type="text" name="troupe" id="troupe" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter troupe"   />
                                 </div> -->
@@ -261,7 +261,7 @@
 
                     
                         <div class="row mb-3">
-                            <label class="h4" for="active_status">Status</label>
+                            <label class="h4" for="active_status">Status<span style="color: red;">*</span></label>
                             <div>
                                 <select name="active_status" id="active_status"  class="form-select form-select-lg" style="color: black; font-size: 18px;" required>
                                     <option value="">Select status</option>

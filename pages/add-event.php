@@ -153,7 +153,7 @@
                 <div class="card-body">
                     <form action="../includes/controller/events/create-events.php" method="post">
                         <div class="row mb-3 flex-grow-1">
-                            <label class="h4" for="troupe">Troupe</label>
+                            <label class="h4" for="troupe">Troupe<span style="color: red;">*</span></label>
                             <!-- <div>
                                 <input type="text" name="troupe" id="troupe" class="form-control py-3" style="color: black; font-size: 18px;" placeholder="Enter troupe"   />
                             </div> -->
@@ -198,7 +198,7 @@
                         </div>
 
                         <div class="row mb-3 flex-grow-1">
-                            <label class="h4" for="event_title">Event Title</label>
+                            <label class="h4" for="event_title">Event Title<span style="color: red;">*</span></label>
                             <div>
                                 <input type="text" name="event_title" maxlength="70" id="event_title" class="form-control py-3" style="color: black; font-size: 18px;"required />
                             </div>
