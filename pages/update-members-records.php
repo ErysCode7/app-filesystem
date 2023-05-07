@@ -244,7 +244,11 @@
                             <select name="troupe" id="troupe" class="form-control" style="color: black" required>
                                 <option value="">Select troupe</option>
                                 <?php foreach ($data as $row) {
-                                    echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
+                                    if ($row['name'] == $troupe) {
+                                        echo "<option value='" . $row['name'] . "' selected>" . $row['name'] . "</option>";
+                                    } else {
+                                        echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
+                                    }
                                 } ?>
                             </select>
                         </div>
@@ -274,12 +278,13 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label" for="active_status">Status</label>
                         <div class="col-sm-10">
-                                <select name="active_status" id="active_status" value="<?= $active_status ?>"  class="form-select form-select-lg" style="color: black" required>
+
+                            <select name="active_status" id="active_status" value="<?= $active_status ?>"  class="form-select form-select-lg" style="color: black" required>
                                 <option value="">Select status</option>
-                                <option value="active">Active</option>
-                                <option value="inactive">Inactive</option>
-                                <option value="quit">Quit</option>
-                                <option value="alumni">Alumni</option>
+                                <option value="active" <?php if ($active_status == 'active') echo 'selected'; ?>>Active</option>
+                                <option value="inactive" <?php if ($active_status == 'inactive') echo 'selected'; ?>>Inactive</option>
+                                <option value="quit" <?php if ($active_status == 'quit') echo 'selected'; ?>>Quit</option>
+                                <option value="alumni" <?php if ($active_status == 'alumni') echo 'selected'; ?>>Alumni</option>
                             </select>
                         </div>
                     </div>

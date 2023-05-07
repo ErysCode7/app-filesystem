@@ -155,9 +155,9 @@
 
 
                         <div class="row mb-3">
-                            <label class="h4" for="troupes_name">Troupes</label>
+                            <label class="h4" for="troupes_name">Troupes<span style="color: red;">*</span></label>
                             <div class="">
-                                <input type="text" name="troupes_name" id="troupes_name" class="form-control py-3" style="color: black; font-size: 18px;" />
+                                <input type="text" name="troupes_name" id="troupes_name" class="form-control py-3" style="color: black; font-size: 18px;" required/>
                             </div>
                         </div>
 
